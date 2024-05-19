@@ -21,4 +21,15 @@
     .btn:hover{
         background-color: #020507;
     }
+    @media(max-width:768px){
+        .navbar_collapse{
+            position: absolute;
+            top: 76px;
+            width: 100%;
+            left: 0;
+            z-index: 999;
+            background-color: #fbd02b;
+            padding: 20px 0;
+        }
+    }
 }

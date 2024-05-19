@@ -1,0 +1,86 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: #d6d7d8;
+    form{
+        padding: 15px;
+        background-color: #c4bebe57;
+        border: 1px solid #eae3e3;
+        .bottomform {
+            display: flex;
+        }
+        
+        .formsec {
+            width: 50%;
+        }
+
+        .submitBtn {
+            padding: 10px 50px;
+            background-color: #112A46;
+            color: #fff;
+            border: none;
+            margin: auto;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 600;
+            @media(max-width:768px){
+                padding: 5px 10px;
+            }
+        }
+        .submitBtn:hover{
+            background-color: #020507;
+        }
+    }
+    .points{
+        display: flex;
+        justify-content: center;
+        li{
+            list-style-type: none;
+            padding: 0px 25px;
+            border-right: 1px solid #000;
+            font-weight: 600;
+            .tick{
+                color: #fbd02b;
+                font-size: 20px;
+            }
+        }
+        :last-child{
+            border-right: none;
+        }
+        @media(max-width:768px){
+            flex-direction: column;
+            align-items: center;
+            li{
+                border-right: none;
+            }
+        }
+    }
+    .callBtn{
+        padding: 20px 55px;
+        background-color: #112A46;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 25px;
+        font-weight: 600;
+        @media(max-width:768px){
+            padding: 10px 15px;
+        }
+    }
+    .callBtn:hover{
+        background-color: #020507;
+    }
+    .callus{
+        text-align: center;
+        font-size: 15px;
+        .headphone{
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        span{
+            font-weight: 600;
+        }
+    }
+}

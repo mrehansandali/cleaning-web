@@ -8,8 +8,8 @@ type Props = {}
 const footer = (props: Props) => {
   return (
     <>
-        <footer className={`${styles.footer_container} footer mt-5`}>
-            <div className={`container mt-5`}>            
+        <footer className={`${styles.footer_container} footer pt-3`}>
+            <div className={`container`}>            
                 <div className="row">
                 <div className="col-md-4">
                     <h3>About Company</h3>
@@ -52,7 +52,7 @@ const footer = (props: Props) => {
                 </div>
             </div>
             <div className={`${styles.footer_bottom_banner}`}>
-                <p className='text-center'>© 2023 Te &amp; Coffee Store. All rights reserved.</p>
+                <p className='text-center'>© 2023 Shah Cleaning Service. All rights reserved.</p>
             </div>
         </footer>
 

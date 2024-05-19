@@ -22,7 +22,7 @@ import Image from 'next/image';
 
 type Props = {}
 
-const Page = (props: Props) => {
+const header = (props: Props) => {
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownToggle = () => setDropdownOpen(!dropdownOpen);
@@ -94,29 +94,48 @@ const Page = (props: Props) => {
         </MediaQuery>
 
         <MediaQuery maxWidth={867}>
-            <Navbar>
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
+            <Navbar className={`${styles.navbar} me-auto`}>
+                <NavbarBrand href="/">
+                    <Image
+                    className={styles.logo}
+                    alt="logo"
+                    src={logo}
+                    style={{
+                    height: 50,
+                    width: 50
+                    }}
+                    />
+                </NavbarBrand>
                 <NavbarToggler onClick={mblToggle} />
-                <Collapse isOpen={isOpen} navbar>
-                <Nav className="me-auto" navbar>
-                    <NavItem>
-                    <NavLink href="/components/">Components</NavLink>
-                    </NavItem>
-                    <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap">
-                        GitHub
-                    </NavLink>
-                    </NavItem>
-                    <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                        Options
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                        <DropdownItem>Option 1</DropdownItem>
-                    </DropdownMenu>
-                    </UncontrolledDropdown>
+                <Collapse className={`${styles.navbar_collapse}`} isOpen={isOpen} navbar>
+                <Nav navbar>
+                    <NavItem><NavLink href="#">Home</NavLink></NavItem>
+                    <NavItem><NavLink href="#">About Us</NavLink></NavItem>
+                    <Dropdown nav isOpen={dropdownOpen} toggle={dropdownToggle}>
+                        <DropdownToggle nav caret>Services</DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem><NavLink href='#'>House Cleaning</NavLink></DropdownItem>
+                            <DropdownItem><NavLink href='#'>Deep Cleaning</NavLink></DropdownItem>
+                            <DropdownItem><NavLink href='#'>End Of Lease Cleaning</NavLink></DropdownItem>
+                            <DropdownItem><NavLink href='#'>Regular Cleaning</NavLink></DropdownItem>
+                            <DropdownItem><NavLink href='#'>Carpet Cleaning</NavLink></DropdownItem>
+                            <DropdownItem><NavLink href='#'>Construction Cleaning</NavLink></DropdownItem>
+                            <DropdownItem><NavLink href='#'>Other Cleaning</NavLink></DropdownItem>
+                            {/* <Dropdown nav isOpen={nestedDropdownOpen} toggle={nestedDropdownToggle}>
+                                    <DropdownToggle nav caret>
+                                        Nested Dropdown
+                                    </DropdownToggle>
+                                    <DropdownMenu end>
+                                        <DropdownItem><NavLink href='#'>Nested Item 1</NavLink></DropdownItem>
+                                        <DropdownItem><NavLink href='#'>Nested Item 2</NavLink></DropdownItem>
+                                    </DropdownMenu>
+                            </Dropdown> */}
+                        </DropdownMenu>
+                    </Dropdown>
+                    <NavItem><NavLink href="#">Prices</NavLink></NavItem>
+                    <NavItem><NavLink href="#">Reviews</NavLink></NavItem>
+                    <NavItem><NavLink href="#">Contact Us</NavLink></NavItem>
                 </Nav>
-                <NavbarText>Simple Text</NavbarText>
                 </Collapse>
             </Navbar>
         </MediaQuery>
@@ -125,4 +144,4 @@ const Page = (props: Props) => {
   )
 }
 
-export default Page
+export default header
