@@ -1,0 +1,32 @@
+.footer_container{
+    background-color: #fbd02b;
+    .logo{
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+    a{
+        color: #112A46;
+        padding: 5px 10px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #020507;
+    }
+
+    .links_heading{
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .footer_bottom_banner{
+        background-color: #112A46;
+        color: #fff;
+        padding: 20px 0;
+        p{
+            margin: 0;
+        }
+    }
+}
