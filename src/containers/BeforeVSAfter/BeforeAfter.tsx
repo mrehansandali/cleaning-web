@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, FreeMode, Pagination } from 'swiper/modules';
+import { Navigation, FreeMode, Pagination, Autoplay } from 'swiper/modules';
 import styles from "./beforeafter.module.scss"
 
 type Props = {}
@@ -49,11 +49,14 @@ const BeforeAfter = (props: Props) => {
       <p className={`${styles.text}`}>We Will Get It Cleaned</p>
       <div className={styles.swiper_container}>
         <Swiper
-            modules={[Navigation, FreeMode, Pagination]}
+            modules={[Navigation, FreeMode, Pagination, Autoplay]}
             navigation={true}
             pagination={true}
             className={`${styles.swiper} mySwiper`}
-            loop={false}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+            }}
             breakpoints={{
                 1: {
                     slidesPerView: 1,

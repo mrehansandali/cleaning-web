@@ -2,57 +2,49 @@ import React from 'react'
 import styles from "./footer.module.scss"
 import logo from "../../public/images/logo.jpeg"
 import Image from 'next/image'
+import { GiWorld, GiStarShuriken } from "react-icons/gi";
+import { IoMdMail } from "react-icons/io";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoLocationSharp } from "react-icons/io5";
 
 type Props = {}
 
 const footer = (props: Props) => {
   return (
     <>
-        <footer className={`${styles.footer_container} footer pt-3`}>
-            <div className={`container`}>            
+        <footer className={`${styles.footer_container} footer pt-5`}>
+            <div className={`${styles.container} pb-5`}>            
                 <div className="row">
-                <div className="col-md-4">
-                    <h3>About Company</h3>
-                    <Image
-                    className={styles.logo}
-                    alt="logo"
-                    src={logo}
-                    style={{
-                    height: 90,
-                    width: 90
-                    }}
-                    />
-                    <ul>
-                    <li>Email: example@gmail.com</li>
-                    <li>+1 2345 6789</li>
-                    <li>123 Main Street Sydney, NSW 2000 Australia</li>
-                    </ul>
-                </div>
-                <div className="col-md-4">
-                    <h3>QuickLinks</h3>
-                    <ul>
-                    <li><a href="services.html">Our Services</a></li>
-                    <li><a href="Contactus.html">Contact Us</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="./PrivacyPolicy.html">Privacy Policy</a></li>
-                    <li><a href="./ShippingPolicy.html">Shipping Policy</a></li>
-                    <li><a href="./ReturnPolicy.html">Return Policy</a></li>
-                    <li><a href="./Terms&Conditions.html">Terms &amp; Conditions</a></li>
-                    </ul>
-                </div>
-                <div className="col-md-4">
-                    <h3>Contact Us</h3>
-                    <ul>
-                    <li>info@example.com</li>
-                    <li>+92 312 8345678</li>
-                    <p className={styles.links_heading}>Opening Hours</p>
-                    <li>8:00AM - 6:00PM Monday to Friday</li>
-                    </ul>
-                </div>
+                    <div className={`${styles.col_1} col-md-7`}>
+                        <Image
+                        className={styles.logo}
+                        alt="logo"
+                        src={logo}
+                        style={{
+                        height: 90,
+                        width: 90
+                        }}
+                        />
+                        <ul>
+                            <li><div><IoLocationSharp className={`${styles.info_icons}`}/></div> Suite# 2/39 Marion St.Parramatta, NSW 2150</li>
+                            <li><div><FaPhoneAlt className={`${styles.info_icons}`}/></div> 0452 412683</li>
+                            <li><div><IoMdMail className={`${styles.info_icons}`}/></div> info@shahcleaningservices.com.au</li>
+                            <li><div><GiWorld className={`${styles.info_icons}`}/></div> shahcleaningservices.com.au</li>
+                        </ul>
+                    </div>
+                    <div className={`${styles.col_2} col-md-5 m-auto`}>
+                        <h3 className={`${styles.heading}`}>Shah Cleaning Services</h3>
+                        <ul>
+                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div> <a href="">Commercial Cleaning</a></li>
+                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div> <a href="">Domestic Cleaning</a></li>
+                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div> <a href="">Office Cleaning</a></li>
+                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div> <a href="">Construction Cleaning</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div className={`${styles.footer_bottom_banner}`}>
-                <p className='text-center'>© 2023 Shah Cleaning Service. All rights reserved.</p>
+                <p className='text-center m-0'>© 2023 Shah Cleaning Service. All rights reserved.</p>
             </div>
         </footer>
 
