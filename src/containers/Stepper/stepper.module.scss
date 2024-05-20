@@ -1,0 +1,120 @@
+@import '../../styles/variables';
+
+.heading{
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    color: $tarcoal;
+    font-family: $poppins_regular;
+    @media(max-width:768px){
+        font-size: 25px;
+    }
+}
+.stepper_container {
+    font-family: $poppins_regular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+  
+    .stepper_step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 25%;
+      text-align: center;
+      position: relative;
+  
+      &.not_last {
+        .stepper_circle {
+          background-color: #ddd;
+        }
+      }
+  
+      .stepper_circle {
+        width: 7rem;
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $yellow;
+        color: white;
+        font-size: 35px;
+        border: 10px solid $tarcoal;
+        z-index: 2;
+      }
+  
+      .stepper_text {
+        margin-top: 0.5rem;
+        font-size: 15px;
+        height: 70px;
+      }
+    }
+
+    .stepper_step:after{
+      content: "";
+      width: 100%;
+      height: 5px;
+      background-color: #000;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      z-index: 1;
+    }
+
+    .stepper_step:last-child::after{
+        width: 50%;
+        left: 0;
+    }
+
+    .stepper_step:first-child::after{
+        width: 50%;
+        right: 0;
+    }
+    @media(max-width:768px){
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+
+        .stepper_step{
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            .stepper_circle{
+                height: 5rem;
+                width: 5rem;
+                border: 5px solid $tarcoal;
+            }
+        }
+
+        .stepper_text {
+            margin: 0 !important;
+            height: auto !important;
+            width: 180px;
+        }
+
+        .stepper_step:after{
+            content: "";
+            width: 5px;
+            height: 100%;
+            top: 60px;
+            left: 37px;
+        }
+
+        .stepper_step:last-child::after{
+            height: 0;
+            width: 5px;
+            left: 37px;
+        }
+    
+        .stepper_step:first-child::after{
+            height: 100%;
+            width: 5px;
+            left: 37px;
+        }
+    }
+  }

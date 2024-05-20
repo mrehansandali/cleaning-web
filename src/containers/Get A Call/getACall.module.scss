@@ -1,0 +1,30 @@
+// #fbd02b
+// #112A46
+// #020507
+@import '../../styles/variables';
+
+.callUs {
+    padding: 15px 35px;
+    background-color: #112A46;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: $poppins-regular;
+    @media(max-width:768px){
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+}
+.callUs:hover{
+    background-color: #020507;
+}
+.text{
+    font-family: $poppins-regular;
+    font-size: 15px;
+    color: grey;
+    @media(max-width:768px){
+        font-size: 15px;
+    }
+}

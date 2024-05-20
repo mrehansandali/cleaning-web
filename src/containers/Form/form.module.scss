@@ -3,7 +3,12 @@
     flex-direction: column;
     justify-content: center;
     padding: 30px 0;
-    background-color: #d6d7d8;
+    height: calc(100vh - 86px);
+    max-height: 900px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../public/images/hero.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     form{
         padding: 15px;
         background-color: #c4bebe57;
@@ -41,6 +46,7 @@
             padding: 0px 25px;
             border-right: 1px solid #000;
             font-weight: 600;
+            color: #fff;
             .tick{
                 color: #fbd02b;
                 font-size: 20px;
@@ -75,9 +81,11 @@
     .callus{
         text-align: center;
         font-size: 15px;
+        color: #fff;
         .headphone{
             font-size: 30px;
             margin-right: 10px;
+            color: #fbd02b;
         }
         span{
             font-weight: 600;

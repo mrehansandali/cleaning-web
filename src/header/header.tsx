@@ -1,144 +1,60 @@
-"use client"
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styles from "./header.module.scss"
 import logo from "../../public/images/logo.jpeg"
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText,
-    Dropdown
-  } from 'reactstrap';
-import MediaQuery from 'react-responsive';
 import Image from 'next/image';
 
 type Props = {}
 
 const header = (props: Props) => {
 
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-    const dropdownToggle = () => setDropdownOpen(!dropdownOpen);
-
-    // const [nestedDropdownOpen, setNestedDropdownOpen] = useState(false);
-    // const nestedDropdownToggle = () => setNestedDropdownOpen(!nestedDropdownOpen);
-    
-    const [isOpen, setIsOpen] = useState(false);
-    const mblToggle = () => setIsOpen(!isOpen);
-
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
-    if (!isClient) {
-        return null;
-    }
-
     return (
     <>
         <header>
-        <MediaQuery minWidth={867}>
-            <Navbar className={`${styles.navbar} me-auto`}> 
-                <NavbarBrand href="/">
-                    <Image
-                    className={styles.logo}
-                    alt="logo"
-                    src={logo}
-                    style={{
-                    height: 60,
-                    width: 60
-                    }}
-                    />
-                </NavbarBrand>
-                <Nav>
-                    <NavItem><NavLink href="#">Home</NavLink></NavItem>
-                    <NavItem><NavLink href="#">About Us</NavLink></NavItem>
-                    <Dropdown nav isOpen={dropdownOpen} toggle={dropdownToggle}>
-                        <DropdownToggle nav caret>Services</DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem><NavLink href='#'>House Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>Deep Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>End Of Lease Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>Regular Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>Carpet Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>Construction Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>Other Cleaning</NavLink></DropdownItem>
-                            {/* <Dropdown nav isOpen={nestedDropdownOpen} toggle={nestedDropdownToggle}>
-                                    <DropdownToggle nav caret>
-                                        Nested Dropdown
-                                    </DropdownToggle>
-                                    <DropdownMenu end>
-                                        <DropdownItem><NavLink href='#'>Nested Item 1</NavLink></DropdownItem>
-                                        <DropdownItem><NavLink href='#'>Nested Item 2</NavLink></DropdownItem>
-                                    </DropdownMenu>
-                            </Dropdown> */}
-                        </DropdownMenu>
-                    </Dropdown>
-                    <NavItem><NavLink href="#">Prices</NavLink></NavItem>
-                    <NavItem><NavLink href="#">Reviews</NavLink></NavItem>
-                    <NavItem><NavLink href="#">Contact Us</NavLink></NavItem>
-                </Nav>
-                <div>
-                    <button className={styles.btn}>Log In</button>
-                    <button className={`${styles.btn} ms-2`}>Book Now</button>
+            <nav className={`${styles.navbar} navbar navbar-expand-lg`}>
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="#">
+                        <Image
+                        className={styles.logo}
+                        alt="logo"
+                        src={logo}
+                        style={{
+                        height: 60,
+                        width: 60
+                        }}
+                        />
+                    </a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon" />
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li className="nav-item"><a className="nav-link active" aria-current="page" href="#">Home</a></li>
+                            <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul className="dropdown-menu">
+                                <li><a className="dropdown-item" href="#">House Cleaning</a></li>
+                                <li><a className="dropdown-item" href="#">Deep Cleaning</a></li>
+                                <li><a className="dropdown-item" href="#">End Of Lease Cleaning</a></li>
+                                <li><a className="dropdown-item" href="#">Regular Cleaning</a></li>
+                                <li><a className="dropdown-item" href="#">Carpet Cleaning</a></li>
+                                <li><a className="dropdown-item" href="#">Construction Cleaning</a></li>
+                                <li><a className="dropdown-item" href="#">Other Cleaning</a></li>
+                            </ul>
+                            </li>
+                            <li className="nav-item"><a className="nav-link active" aria-current="page" href="#">About Us</a></li>
+                            <li className="nav-item"><a className="nav-link active" aria-current="page" href="#">Prices</a></li>
+                            <li className="nav-item"><a className="nav-link active" aria-current="page" href="#">Reviews</a></li>
+                            <li className="nav-item"><a className="nav-link active" aria-current="page" href="#">Contact Us</a></li>
+                        </ul>
+                        <div>
+                            <button className={styles.btn}>Log In</button>
+                            <button className={`${styles.btn} ms-2`}>Book Now</button>
+                        </div>
+                    </div>
                 </div>
-            </Navbar>
-        </MediaQuery>
-
-        <MediaQuery maxWidth={867}>
-            <Navbar className={`${styles.navbar} me-auto`}>
-                <NavbarBrand href="/">
-                    <Image
-                    className={styles.logo}
-                    alt="logo"
-                    src={logo}
-                    style={{
-                    height: 50,
-                    width: 50
-                    }}
-                    />
-                </NavbarBrand>
-                <NavbarToggler onClick={mblToggle} />
-                <Collapse className={`${styles.navbar_collapse}`} isOpen={isOpen} navbar>
-                <Nav navbar>
-                    <NavItem><NavLink href="#">Home</NavLink></NavItem>
-                    <NavItem><NavLink href="#">About Us</NavLink></NavItem>
-                    <Dropdown nav isOpen={dropdownOpen} toggle={dropdownToggle}>
-                        <DropdownToggle nav caret>Services</DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem><NavLink href='#'>House Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>Deep Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>End Of Lease Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>Regular Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>Carpet Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>Construction Cleaning</NavLink></DropdownItem>
-                            <DropdownItem><NavLink href='#'>Other Cleaning</NavLink></DropdownItem>
-                            {/* <Dropdown nav isOpen={nestedDropdownOpen} toggle={nestedDropdownToggle}>
-                                    <DropdownToggle nav caret>
-                                        Nested Dropdown
-                                    </DropdownToggle>
-                                    <DropdownMenu end>
-                                        <DropdownItem><NavLink href='#'>Nested Item 1</NavLink></DropdownItem>
-                                        <DropdownItem><NavLink href='#'>Nested Item 2</NavLink></DropdownItem>
-                                    </DropdownMenu>
-                            </Dropdown> */}
-                        </DropdownMenu>
-                    </Dropdown>
-                    <NavItem><NavLink href="#">Prices</NavLink></NavItem>
-                    <NavItem><NavLink href="#">Reviews</NavLink></NavItem>
-                    <NavItem><NavLink href="#">Contact Us</NavLink></NavItem>
-                </Nav>
-                </Collapse>
-            </Navbar>
-        </MediaQuery>
+            </nav>
         </header>
     </> 
   )

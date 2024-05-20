@@ -1,3 +1,56 @@
 // #fbd02b
 // #112A46
 // #020507
+@import '../../styles/variables';
+
+.heading{
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    color: $tarcoal;
+    @media(max-width:768px){
+        font-size: 25px;
+    }
+}
+.swiper_container{
+    margin: auto;
+    font-family: $poppins_regular;
+    .swiper{
+        padding: 30px 10px;
+        .slide{
+            padding: 10px;
+            padding-left: 15px;
+            .review_body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+                border-radius: 5px;
+                gap: 10px;
+                box-shadow: 0px 0px 5px 2px rgba(151, 149, 149, 0.75);
+                .image{
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 4px solid #fbd02b;
+                }
+                .fullName{
+                    font-size: 25px;
+                    margin: 0;
+                }
+                .review{
+                    font-size: 15px;
+                    margin: 0;
+                    color: grey;
+                    min-height: 110px;
+                }
+                .position{
+                    font-size: 18px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

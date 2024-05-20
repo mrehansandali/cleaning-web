@@ -19,8 +19,8 @@ const FormComp = (props: Props) => {
     <>
     <div className={`${styles.container} container-fluid`}>
       <div className="container">
-        <h1 className='mb-3 text-center fs-2'>#1 Rated Cleaning Service in Sydney, Canberra & Melbourne</h1>
-        <h4 className='mb-3 text-center fs-5'>Use our booking form to create an instant quote for any cleaning services</h4>
+        <h1 className='mb-3 text-white text-center fs-2'>#1 Rated Cleaning Service in Sydney, Canberra & Melbourne</h1>
+        <h4 className='mb-3 text-white text-center fs-5'>Use our booking form to create an instant quote for any cleaning services</h4>
         <form>
           <div className={`${styles.bottomform}`}>
             <div className={`${styles.formsec} me-3`}>
