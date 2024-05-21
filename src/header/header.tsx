@@ -10,7 +10,7 @@ const header = (props: Props) => {
     return (
     <>
         <header>
-            <nav className={`${styles.navbar} navbar navbar-expand-lg`}>
+            <nav className={`${styles.navbar} p-1 navbar navbar-expand-lg`}>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
                         <Image
@@ -28,8 +28,8 @@ const header = (props: Props) => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-                            <li className="nav-item"><a className="nav-link active" aria-current="page" href="#">Home</a></li>
-                            <li className="nav-item dropdown">
+                            <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Home</a></li>
+                            <li className="nav-item p-1 dropdown">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
@@ -43,10 +43,10 @@ const header = (props: Props) => {
                                 <li><a className="dropdown-item" href="#">Other Cleaning</a></li>
                             </ul>
                             </li>
-                            <li className="nav-item"><a className="nav-link active" aria-current="page" href="#">About Us</a></li>
-                            <li className="nav-item"><a className="nav-link active" aria-current="page" href="#">Prices</a></li>
-                            <li className="nav-item"><a className="nav-link active" aria-current="page" href="#">Reviews</a></li>
-                            <li className="nav-item"><a className="nav-link active" aria-current="page" href="#">Contact Us</a></li>
+                            <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">About Us</a></li>
+                            <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Prices</a></li>
+                            <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Reviews</a></li>
+                            <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Contact Us</a></li>
                         </ul>
                         <div>
                             <button className={styles.btn}>Log In</button>

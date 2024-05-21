@@ -28,6 +28,9 @@
                     width: 100%;
                     object-fit: cover;
                     border-top-left-radius: 100px;
+                    @media(max-width:768px){
+                        height: 250px;
+                    }
                 }
 
                 img:hover{
@@ -44,12 +47,21 @@
                     color: #fff;
                     margin: 0;
                     height: 100%;
-                    padding: 20px 0 20px 20px;        
+                    padding: 20px 0 20px 20px;
+                    font-size: 18px;
                 }
                 a{
                     color: $yellow;
                     background-color: #051438;
                     padding: 20px;
+                }
+                @media(max-width:768px){
+                    a{
+                        padding: 10px;
+                    }
+                    h5{
+                        padding: 10px 0 10px 10px;  
+                    }
                 }
             }
         }

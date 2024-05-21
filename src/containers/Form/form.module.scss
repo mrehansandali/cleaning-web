@@ -14,10 +14,18 @@
         border: 1px solid #eae3e3;
         .bottomform {
             display: flex;
+            @media(max-width:768px){
+                gap: 5px;
+            }
         }
         
         .formsec {
             width: 50%;
+            @media(max-width:768px){
+                >div{
+                    margin-bottom: 5px !important;
+                }
+            }
         }
 
         .submitBtn {
@@ -28,7 +36,7 @@
             margin: auto;
             border-radius: 5px;
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 300;
             @media(max-width:768px){
                 padding: 5px 10px;
             }

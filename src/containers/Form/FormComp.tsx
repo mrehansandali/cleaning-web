@@ -19,17 +19,17 @@ const FormComp = (props: Props) => {
     <>
     <div className={`${styles.container} container-fluid`}>
       <div className="container">
-        <h1 className='mb-3 text-white text-center fs-2'>#1 Rated Cleaning Service in Sydney, Canberra & Melbourne</h1>
+        <h1 className='mb-2 text-white text-center fs-2'>5 Star Rated Cleaning Company in Sydney</h1>
         <h4 className='mb-3 text-white text-center fs-5'>Use our booking form to create an instant quote for any cleaning services</h4>
         <form>
           <div className={`${styles.bottomform}`}>
-            <div className={`${styles.formsec} me-3`}>
+            <div className={`${styles.formsec}`}>
               <div className="mb-3">
                 <input
                   type="text"
                   className="form-control"
                   id="username"
-                  placeholder="Enter Username"
+                  placeholder="Name"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
@@ -39,7 +39,7 @@ const FormComp = (props: Props) => {
                   type="text"
                   className="form-control"
                   id="phone"
-                  placeholder="Enter Your Number"
+                  placeholder="Phone Number"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
@@ -49,7 +49,7 @@ const FormComp = (props: Props) => {
                   type="email"
                   className="form-control"
                   id="email"
-                  placeholder="Enter Email"
+                  placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />

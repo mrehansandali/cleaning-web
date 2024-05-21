@@ -12,8 +12,8 @@ type Props = {}
 const footer = (props: Props) => {
   return (
     <>
-        <footer className={`${styles.footer_container} footer pt-5`}>
-            <div className={`${styles.container} pb-5`}>            
+        <footer className={`${styles.footer_container} footer pt-3`}>
+            <div className={`${styles.container} pb-4`}>            
                 <div className="row">
                     <div className={`${styles.col_1} col-md-7`}>
                         <Image
@@ -43,9 +43,7 @@ const footer = (props: Props) => {
                     </div>
                 </div>
             </div>
-            <div className={`${styles.footer_bottom_banner}`}>
-                <p className='text-center m-0'>© 2023 Shah Cleaning Service. All rights reserved.</p>
-            </div>
+            <p className={`${styles.footer_bottom_banner}`}>© 2024 Shah Cleaning Service. All rights reserved.</p>
         </footer>
 
     </>
