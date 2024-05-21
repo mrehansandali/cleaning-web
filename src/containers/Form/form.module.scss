@@ -14,6 +14,7 @@
         border: 1px solid #eae3e3;
         .bottomform {
             display: flex;
+            gap: 16px;
             @media(max-width:768px){
                 gap: 5px;
             }

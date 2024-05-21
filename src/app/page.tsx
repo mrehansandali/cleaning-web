@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import "@/styles/_main.scss"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,6 +11,7 @@ import BeforeAfter from "@/containers/BeforeVSAfter/BeforeAfter"
 import GetACall from '@/containers/Get A Call/GetACall';
 import Stepper from '@/containers/Stepper/Stepper';
 import Services from '@/containers/Services/Services';
+import WhatMakeUsDifferent from '@/containers/WhatMakeUsDifferent/whatMakeUsDifferent';
 
 type Props = {}
 
@@ -23,6 +25,7 @@ const page = (props: Props) => {
         <GetACall/>
         <Services/>
         <GetACall/>
+        <WhatMakeUsDifferent/>
         <Stepper/>
       </main>
     </>

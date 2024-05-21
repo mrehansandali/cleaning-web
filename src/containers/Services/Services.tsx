@@ -8,7 +8,8 @@ const Services = () => {
     <>
       
       <div className="container mt-5">
-        <h2 className={`${styles.heading}`}>Simply book in 4 steps</h2>
+        <h2 className={`${styles.heading}`}>Our Cleaning Services</h2>
+        <p className={`${styles.text}`}>Call The Cleaners is a straightforward and transparent solution for all of your professional house cleaning needs. <br /> Try our professional cleaners today and experience a clean home. <br /> There are no hidden fees or contracts to sign, and you can cancel at any time.</p>
         <div className={`${styles.container} row`}>
             <div className={`col-md-4 my-3 ${styles.productCard}`}>
                 <div className={`${styles.card}`}>
