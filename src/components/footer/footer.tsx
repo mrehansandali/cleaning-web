@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./footer.module.scss"
-import logo from "../../public/images/logo.jpeg"
+import logo from "../../../public/images/logo.jpeg"
 import Image from 'next/image'
 import { GiWorld, GiStarShuriken } from "react-icons/gi";
 import { IoMdMail } from "react-icons/io";

@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./header.module.scss"
-import logo from "../../public/images/logo.jpeg"
+import logo from "../../../public/images/logo.jpeg"
 import Image from 'next/image';
 
 type Props = {}

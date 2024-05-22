@@ -1,4 +1,4 @@
-@import "../styles//variables";
+@import "../../styles/variables";
 
 .footer_container{
     background-color: #000;
@@ -113,8 +113,8 @@
     .footer_bottom_banner{
         background-color: #112A46;
         color: #fff;
-        padding: 20px 0;
-        font-size: 18px;
+        padding: 10px 0;
+        font-size: 15px;
         margin: 0;
         text-align: center;
         @media(max-width:768px){

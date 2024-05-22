@@ -12,6 +12,7 @@ import GetACall from '@/containers/Get A Call/GetACall';
 import Stepper from '@/containers/Stepper/Stepper';
 import Services from '@/containers/Services/Services';
 import WhatMakeUsDifferent from '@/containers/WhatMakeUsDifferent/whatMakeUsDifferent';
+import PricingPlan from '@/containers/PricingPlan/PricingPlan';
 
 type Props = {}
 
@@ -27,6 +28,8 @@ const page = (props: Props) => {
         <GetACall/>
         <WhatMakeUsDifferent/>
         <Stepper/>
+        <GetACall/>
+        <PricingPlan/>
       </main>
     </>
   )

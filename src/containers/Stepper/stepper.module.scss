@@ -21,7 +21,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 25%;
+      width: 33%;
       text-align: center;
       position: relative;
   
@@ -32,17 +32,18 @@
       }
   
       .stepper_circle {
-        width: 7rem;
-        height: 7rem;
+        padding: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 50%;
         background-color: $yellow;
-        color: white;
-        font-size: 35px;
-        border: 10px solid $tarcoal;
         z-index: 2;
+        border: 2px solid #fff;
+        .steps_icon{
+          font-size: 15px;
+          color: #fff;
+        }
       }
   
       .stepper_text {
@@ -55,10 +56,10 @@
     .stepper_step:after{
       content: "";
       width: 100%;
-      height: 5px;
-      background-color: #000;
+      height: 2px;
+      background-color: $yellow;
       position: absolute;
-      top: 55px;
+      top: 13px;
       right: 0;
       z-index: 1;
     }
@@ -84,11 +85,6 @@
             width: 100%;
             align-items: center;
             justify-content: space-between;
-            .stepper_circle{
-                height: 5rem;
-                width: 5rem;
-                border: 5px solid $tarcoal;
-            }
         }
 
         .stepper_text {
@@ -99,22 +95,21 @@
 
         .stepper_step:after{
             content: "";
-            width: 5px;
+            width: 4px;
             height: 100%;
             top: 60px;
-            left: 37px;
+            left: 13px;
         }
 
         .stepper_step:last-child::after{
             height: 0;
-            width: 5px;
-            left: 37px;
         }
     
         .stepper_step:first-child::after{
-            height: 100%;
-            width: 5px;
-            left: 37px;
+            height: 180%;
+            top: 43px;
+            width: 4px;
+            left: 13px;
         }
     }
   }

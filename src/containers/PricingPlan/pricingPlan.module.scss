@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.container{
+
+    .tabs{
+        >div>div{
+            justify-content: center;
+            background-color: $tarcoal;
+            @media(max-width:768px) {
+                flex-direction: column;
+            }
+        } 
+        >div>span{
+            background-color: transparent;
+        }
+        .tab{
+            color: #fff;
+            font-size: 14px;
+            text-transform: capitalize;
+            border: 3px solid transparent;
+            @media(max-width:768px) {
+                width: 100%;
+                max-width: 768px;
+            }
+        }
+        .tab:focus{
+            border-bottom: 3px solid $yellow;
+        }
+        // @media(max-width:768px) {
+            
+        // }
+    }
+}

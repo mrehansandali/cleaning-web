@@ -10,6 +10,8 @@ import Paper from '@mui/material/Paper';
 import { TiTick } from "react-icons/ti";
 import { RxCross1 } from "react-icons/rx";
 import styles from "./whatMakeUsDifferent.module.scss"
+import bgimg from "../../../public/images/hero.jpg"
+import Image from 'next/image';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -42,9 +44,10 @@ const rows = [
 
 export default function WhatMakeUsDifferent() {
   return (
-    <div className={`${styles.container} mb-5 container`}>
+    <div className={`${styles.container} mb-5 `}>
+      <div className={`container`}>
         <h2 className={`${styles.heading}`}>What Makes Us Different?</h2>
-        <TableContainer component={Paper}>
+        <TableContainer className={`${styles.table_container}`} component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
             <TableRow>
@@ -64,6 +67,7 @@ export default function WhatMakeUsDifferent() {
             </TableBody>
         </Table>
         </TableContainer>
+      </div>
     </div>
   );
 }
