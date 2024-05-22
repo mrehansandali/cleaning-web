@@ -56,17 +56,17 @@ export default function BasicTabs() {
         </Box>
         <CustomTabPanel value={value} index={0}>
             <div className={`${styles.pricing_details}`}>
-                w
+                working on it....tab1
             </div>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
             <div className={`${styles.pricing_details}`}>
-                qq
+              working on it....tab2
             </div>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
             <div className={`${styles.pricing_details}`}>
-                d
+              working on it....tab3
             </div>
         </CustomTabPanel>
         </Box>

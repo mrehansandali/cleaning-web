@@ -8,11 +8,14 @@ import 'swiper/css/pagination';
 import FormComp from '@/containers/Form/FormComp';
 import Testimonail from '@/containers/Testimonial/Reviews';
 import BeforeAfter from "@/containers/BeforeVSAfter/BeforeAfter"
-import GetACall from '@/containers/Get A Call/GetACall';
+import GetACall from '@/containers/GetACall/GetACall';
 import Stepper from '@/containers/Stepper/Stepper';
 import Services from '@/containers/Services/Services';
 import WhatMakeUsDifferent from '@/containers/WhatMakeUsDifferent/whatMakeUsDifferent';
 import PricingPlan from '@/containers/PricingPlan/PricingPlan';
+import ExServices from '@/containers/ExcludedServices/ExServices';
+import PriceList from '@/containers/PriceList/PriceList';
+import ReasonToCallUs from '@/containers/ReasonToCallUs/ReasonToCallUs';
 
 type Props = {}
 
@@ -30,6 +33,10 @@ const page = (props: Props) => {
         <Stepper/>
         <GetACall/>
         <PricingPlan/>
+        <ExServices/>
+        <GetACall/>
+        <PriceList/>
+        <ReasonToCallUs/>
       </main>
     </>
   )

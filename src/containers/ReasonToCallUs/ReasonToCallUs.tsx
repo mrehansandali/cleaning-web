@@ -9,9 +9,8 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { TiTick } from "react-icons/ti";
 import { RxCross1 } from "react-icons/rx";
-import styles from "./whatMakeUsDifferent.module.scss"
-import bgimg from "../../../public/images/hero.jpg"
-import Image from 'next/image';
+import styles from "./reasonToCallUs.module.scss"
+import GetACall from '../GetACall/GetACall';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -33,27 +32,30 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 const rows = [
-  {benefit: "Trusted & Vetted Cleaners", callTheCleaners: true, standardCleaningCompanies: true,},
-  {benefit: "Tailored Service, No Hidden Fees", callTheCleaners: true, standardCleaningCompanies: false,},
-  {benefit: "100% Money-Back guarantee", callTheCleaners: true, standardCleaningCompanies: false,},
-  {benefit: "Schedule Online, Cancel Anytime", callTheCleaners: true, standardCleaningCompanies: false,},
-  {benefit: "Trusted by 1000+ Sydney Homes", callTheCleaners: true, standardCleaningCompanies: false,},
+  {benefit: "Organic, sustainable cleaning products", callTheCleaners: true,},
+  {benefit: "Quick and easy online booking", callTheCleaners: true,},
+  {benefit: "Outstanding customer service", callTheCleaners: true,},
+  {benefit: "Super fast response rate", callTheCleaners: true,},
+  {benefit: "A thorough, friendly and experienced cleaning crew", callTheCleaners: true,},
+  {benefit: "No lock in contracts", callTheCleaners: true,},
+  {benefit: "Customisable Service", callTheCleaners: true,},
+  {benefit: "Competitive pricing", callTheCleaners: true,},
 ];
 
 
 
-export default function WhatMakeUsDifferent() {
+export default function ReasonToCallUs() {
   return (
-    <div className={`${styles.container} mb-5 `}>
+    <div className={`${styles.container}`}>
       <div className={`container`}>
-        <h2 className={`${styles.heading}`}>What Makes Us Different?</h2>
+        <h2 className={`${styles.heading}`}>8 Reasons to Choose Call the Cleaners</h2>
+        <p className={`${styles.text}`}>In order to make an informed decision, it is customary to conduct thorough research on cleaning services and carefully evaluate various <br /> companies based on their experience, pricing, guarantees, and reputation.</p>
         <TableContainer className={`${styles.table_container}`} component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
             <TableRow>
                 <StyledTableCell align="center">Benefits</StyledTableCell>
                 <StyledTableCell align="center">Call The Cleaners</StyledTableCell>
-                <StyledTableCell align="center">Standard Cleaning Companies</StyledTableCell>
             </TableRow>
             </TableHead>
             <TableBody>
@@ -61,7 +63,6 @@ export default function WhatMakeUsDifferent() {
                 <StyledTableRow key={row.benefit}>
                 <StyledTableCell align="center">{row.benefit}</StyledTableCell>
                 <StyledTableCell align="center">{row.callTheCleaners == false ? <RxCross1 className={`${styles.icons}`}/> : <TiTick className={`${styles.icons}`}/>}</StyledTableCell>
-                <StyledTableCell align="center">{row.standardCleaningCompanies == false ? <RxCross1 className={`${styles.icons}`}/> : <TiTick className={`${styles.icons}`}/>}</StyledTableCell>
                 </StyledTableRow>
             ))}
             </TableBody>

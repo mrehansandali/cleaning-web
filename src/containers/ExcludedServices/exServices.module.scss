@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.accordion_container{
+    font-family: $poppins_regular;
+    max-width: 870px;
+    .accordion_icon{
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .accordion_summary{
+        background-color: $tarcoal;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .ul{
+        
+        li{
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            .li_icon{
+                color: red;
+            }
+        }
+        @media (max-width:768px) {
+            padding-left: 0;
+        }
+    }
+}
