@@ -2,6 +2,7 @@ import React from 'react'
 import styles from "./header.module.scss"
 import logo from "../../../public/images/logo.jpeg"
 import Image from 'next/image';
+import { RxHamburgerMenu } from "react-icons/rx";
 
 type Props = {}
 
@@ -23,17 +24,15 @@ const header = (props: Props) => {
                         }}
                         />
                     </a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon" />
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div><RxHamburgerMenu className={styles.menu_icon} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" /></div>
+                    <div className={`${styles.mbl_menu} collapse navbar-collapse`} id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Home</a></li>
                             <li className="nav-item p-1 dropdown">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
-                            <ul className="dropdown-menu">
+                            <ul className={`${styles.dropdown} dropdown-menu`}>
                                 <li><a className="dropdown-item" href="#">House Cleaning</a></li>
                                 <li><a className="dropdown-item" href="#">Deep Cleaning</a></li>
                                 <li><a className="dropdown-item" href="#">End Of Lease Cleaning</a></li>

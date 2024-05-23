@@ -58,6 +58,7 @@ export default function BasicTabs() {
     "Quick de-clutter of floors",
     "Wipe down electronics",
     "Wipe down outside wardrobes",
+    "Dust & wipe down all surfaces",
     "Clean all light switches & doorknobs"
   ];
   const planone_2 = [
@@ -102,11 +103,10 @@ export default function BasicTabs() {
             <div className={`${styles.pricing_details}`}>
                 <p className={`${styles.tab_heading}`}>Saves time and energy by contacting Call the Cleaners to maintain a <br /> healthy and hygienic living environment.</p>
                 <button className={`${styles.tab_btn}`}>Start From $150</button>
-                <div className={`${styles.plan_details}`}>
+                <div className={`${styles.plan_details} mt-3`}>
                   <div className="row">
                     <div className="col-md-4">
                       <div className={`${styles.plan}`}>
-                        <div className={`${styles.icon}`}></div>
                         <p className={`${styles.plan_heading}`}>Bedroom</p>
                         <ul className={`${styles.ul}`}>
                         {planone_1.map((item,index) => {
@@ -122,13 +122,12 @@ export default function BasicTabs() {
                     </div>
                     <div className="col-md-4">
                       <div className={`${styles.plan}`}>
-                        <div className={`${styles.icon}`}></div>
-                        <p className={`${styles.plan_heading}`}>Bedroom</p>
+                        <p className={`${styles.plan_heading}`}>Bathroom</p>
                         <ul className={`${styles.ul}`}>
                         {planone_2.map((item,index) => {
                             return (
                                     <li key={index+1}>
-                                        <div><TiTick className={`${styles.li_icon}`}/></div>
+                                        <TiTick className={`${styles.li_icon}`}/>
                                         <p className="m-0">{item}</p>
                                     </li>
                             )
@@ -138,13 +137,12 @@ export default function BasicTabs() {
                     </div>
                     <div className="col-md-4">
                       <div className={`${styles.plan}`}>
-                        <div className={`${styles.icon}`}></div>
-                        <p className={`${styles.plan_heading}`}>Bedroom</p>
+                        <p className={`${styles.plan_heading}`}>Kitchen</p>
                         <ul className={`${styles.ul}`}>
                         {planone_3.map((item,index) => {
                             return (
                                     <li key={index+1}>
-                                        <div><TiTick className={`${styles.li_icon}`}/></div>
+                                        <TiTick className={`${styles.li_icon}`}/>
                                         <p className="m-0">{item}</p>
                                     </li>
                             )
@@ -160,17 +158,16 @@ export default function BasicTabs() {
             <div className={`${styles.pricing_details}`}>
               <p className={`${styles.tab_heading}`}>Get thorough cleaning of hard-to-reach areas and neglected spaces to revive and restore <br /> the original beauty of your home with Call the Cleaners.</p>
               <button className={`${styles.tab_btn}`}>Start From $200</button>
-              <div className={`${styles.plan_details}`}>
+              <div className={`${styles.plan_details} mt-3`}>
                   <div className="row">
                     <div className="col-md-4">
                       <div className={`${styles.plan}`}>
-                        <div className={`${styles.icon}`}></div>
                         <p className={`${styles.plan_heading}`}>Bedroom</p>
                         <ul className={`${styles.ul}`}>
-                        {planone_1.map((item,index) => {
+                        {planone_2.map((item,index) => {
                             return (
                                     <li key={index+1}>
-                                        <div><TiTick className={`${styles.li_icon}`}/></div>
+                                        <TiTick className={`${styles.li_icon}`}/>
                                         <p className="m-0">{item}</p>
                                     </li>
                             )
@@ -178,27 +175,54 @@ export default function BasicTabs() {
                         </ul>
                       </div>
                     </div>
-                    <div className="col-md-4"></div>
-                    <div className="col-md-4"></div>
+                    <div className="col-md-4">
+                      <div className={`${styles.plan}`}>
+                        <p className={`${styles.plan_heading}`}>Bathroom</p>
+                        <ul className={`${styles.ul}`}>
+                        {planone_3.map((item,index) => {
+                            return (
+                                    <li key={index+1}>
+                                        <TiTick className={`${styles.li_icon}`}/>
+                                        <p className="m-0">{item}</p>
+                                    </li>
+                            )
+                        })}
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="col-md-4">
+                      <div className={`${styles.plan}`}>
+                        <p className={`${styles.plan_heading}`}>Kitchen</p>
+                        <ul className={`${styles.ul}`}>
+                        {planone_1.map((item,index) => {
+                            return (
+                                    <li key={index+1}>
+                                        <TiTick className={`${styles.li_icon}`}/>
+                                        <p className="m-0">{item}</p>
+                                    </li>
+                            )
+                        })}
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-              </div>
+                </div>
             </div>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
             <div className={`${styles.pricing_details}`}>
               <p className={`${styles.tab_heading}`}>Call the Cleaners helps retrieve the security deposit in full and presents <br />the property in the best possible condition for new tenants.</p>
               <button className={`${styles.tab_btn}`}>Start From $350</button>
-              <div className={`${styles.plan_details}`}>
+              <div className={`${styles.plan_details} mt-3`}>
                   <div className="row">
                     <div className="col-md-4">
                       <div className={`${styles.plan}`}>
-                        <div className={`${styles.icon}`}></div>
                         <p className={`${styles.plan_heading}`}>Bedroom</p>
                         <ul className={`${styles.ul}`}>
-                        {planone_1.map((item,index) => {
+                        {planone_3.map((item,index) => {
                             return (
                                     <li key={index+1}>
-                                        <div><TiTick className={`${styles.li_icon}`}/></div>
+                                        <TiTick className={`${styles.li_icon}`}/>
                                         <p className="m-0">{item}</p>
                                     </li>
                             )
@@ -206,10 +230,38 @@ export default function BasicTabs() {
                         </ul>
                       </div>
                     </div>
-                    <div className="col-md-4"></div>
-                    <div className="col-md-4"></div>
+                    <div className="col-md-4">
+                      <div className={`${styles.plan}`}>
+                        <p className={`${styles.plan_heading}`}>Bathroom</p>
+                        <ul className={`${styles.ul}`}>
+                        {planone_1.map((item,index) => {
+                            return (
+                                    <li key={index+1}>
+                                        <TiTick className={`${styles.li_icon}`}/>
+                                        <p className="m-0">{item}</p>
+                                    </li>
+                            )
+                        })}
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="col-md-4">
+                      <div className={`${styles.plan}`}>
+                        <p className={`${styles.plan_heading}`}>Kitchen</p>
+                        <ul className={`${styles.ul}`}>
+                        {planone_2.map((item,index) => {
+                            return (
+                                    <li key={index+1}>
+                                        <TiTick className={`${styles.li_icon}`}/>
+                                        <p className="m-0">{item}</p>
+                                    </li>
+                            )
+                        })}
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-              </div>
+                </div>
             </div>
         </CustomTabPanel>
         </Box>
