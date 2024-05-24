@@ -1,35 +1,62 @@
+@import '../../styles/variables';
+
 .navbar{
-    background-color: #fbd02b;
-    .logo{
-        border-radius: 50%;
+    background-color: #000;
+    .menu_icon{
+        display: none;
     }
     a{
-        color: #112A46;
+        color: #fff !important;
         padding: 5px 10px;
         font-weight: 600;
     }
     a:hover{
-        color: #020507;
+        color: red;
     }
     .btn{
         padding: 5px 15px;
-        background-color: #112A46;
-        color: #fff;
+        background-color: $yellow;
+        color: #000;
         border: none;
-        border-radius: 25px;
+        border-radius: 5px;
+        font-weight: 600;
     }
     .btn:hover{
         background-color: #020507;
     }
+
+    .dropdown li a{
+        color: #000 !important;
+    }
     @media(max-width:768px){
-        .navbar_collapse{
+        .mbl_menu{
             position: absolute;
             top: 76px;
-            width: 100%;
             left: 0;
-            z-index: 999;
-            background-color: #fbd02b;
-            padding: 20px 0;
+            background-color: rgb(0,0,0,0.8);
+            width: 100%;
+            height: fit-content;
+            padding: 15px 0 25px 0;
+            text-align: center;
+        }
+
+        .menu_icon{
+            color: #fff;
+            font-size: 35px;
+            display: block;
+        }
+
+        .dropdown{
+            text-align: center;
+        }
+
+        .dropdown li a{
+            text-align: center;
+        }
+
+        .btn{
+            margin: 0 !important;
+            margin-left: 10px !important;
         }
     }
 }

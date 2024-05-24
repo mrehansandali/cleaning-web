@@ -16,6 +16,7 @@ import PricingPlan from '@/containers/PricingPlan/PricingPlan';
 // import ExServices from '@/containers/ExcludedServices/ExServices';
 import PriceList from '@/containers/PriceList/PriceList';
 import ReasonToCallUs from '@/containers/ReasonToCallUs/ReasonToCallUs';
+import OurGuarantee from '@/containers/OurGuarantee/OurGuarantee';
 
 type Props = {}
 
@@ -36,6 +37,7 @@ const page = (props: Props) => {
         {/* <ExServices/> */}
         <GetACall/>
         <PriceList/>
+        <OurGuarantee/>
         <ReasonToCallUs/>
       </main>
     </>

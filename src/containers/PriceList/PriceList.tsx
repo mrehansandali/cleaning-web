@@ -62,7 +62,7 @@ const services = [
 export default function PriceList() {
   return (
     <>
-        <div className={`${styles.container} mb-5 `}>
+        <div className={`${styles.container} ${styles.remmarg} `}>
         <div className={`container`}>
             <h2 className={`${styles.heading}`}>Call the Cleaners Price List</h2>
             <TableContainer className={`${styles.table_container}`} component={Paper}>
