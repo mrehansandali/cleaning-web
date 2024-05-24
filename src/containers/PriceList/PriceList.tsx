@@ -29,30 +29,35 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 const pricing = [
-  {propertySize: "1 Bedroom, 1 Bathroom", houseCleaning: 155.00, deepCleaning: 210.00, EOLcleaning: 435.00},
-  {propertySize: "2 Bedroom, 1 Bathrooms", houseCleaning: 155.00, deepCleaning: 250.00, EOLcleaning: 499.00},
-  {propertySize: "3 Bedrooms, 2 Bathrooms", houseCleaning: 250.00, deepCleaning: 310.00, EOLcleaning: 550.00},
-  {propertySize: "1 Bedroom, 1 Bathroom", houseCleaning: 155.00, deepCleaning: 210.00, EOLcleaning: 435.00},
-  {propertySize: "2 Bedroom, 1 Bathrooms", houseCleaning: 155.00, deepCleaning: 250.00, EOLcleaning: 499.00},
-  {propertySize: "3 Bedrooms, 2 Bathrooms", houseCleaning: 250.00, deepCleaning: 310.00, EOLcleaning: 550.00},
-  {propertySize: "1 Bedroom, 1 Bathroom", houseCleaning: 155.00, deepCleaning: 210.00, EOLcleaning: 435.00},
-  {propertySize: "2 Bedroom, 1 Bathrooms", houseCleaning: 155.00, deepCleaning: 250.00, EOLcleaning: 499.00},
-  {propertySize: "3 Bedrooms, 2 Bathrooms", houseCleaning: 250.00, deepCleaning: 310.00, EOLcleaning: 550.00},
+  {propertySize: "1 Bedroom, 1 Bathroom", houseCleaning: "$143.00", deepCleaning: "$176.00", EOLcleaning: "$352.00"},
+  {propertySize: "2 Bedroom, 1 Bathrooms", houseCleaning: "$143.00", deepCleaning: "$209.00", EOLcleaning: "$429.00"},
+  {propertySize: "3 Bedrooms, 2 Bathrooms", houseCleaning: "$242.00", deepCleaning: "$275.00", EOLcleaning: "$500.50"},
+  {propertySize: "4 Bedrooms, 2 Bathrooms", houseCleaning: "$275.00", deepCleaning: "$341.00", EOLcleaning: "$577.50"},
+  {propertySize: "5 Bedrooms, 2 Bathrooms", houseCleaning: "$308.00", deepCleaning: "$374.00", EOLcleaning: "$654.50"},
+  {propertySize: "5 Bedrooms, 3 Bathrooms", houseCleaning: "$341.00", deepCleaning: "$407.00", EOLcleaning: "$687.50"},
+  {propertySize: "6 Bedrooms, 3 Bathrooms", houseCleaning: "$374.00", deepCleaning: "$440.00", EOLcleaning: "$764.50"},
+  {propertySize: "6 Bedrooms, 4 Bathrooms", houseCleaning: "$407.00", deepCleaning: "$473.00", EOLcleaning: "$797.50"},
+  {propertySize: "7 Bedrooms, 4 Bathrooms", houseCleaning: "$440.00", deepCleaning: "$506.00", EOLcleaning: "$874.50"},
 ];
 
 const services = [
-    {propertySize: "Wet Wipe Blinds (per blind)", houseCleaning: 155.00, deepCleaning: 210.00, EOLcleaning: 435.00},
-    {propertySize: "Inside Ovens", houseCleaning: 155.00, deepCleaning: 250.00, EOLcleaning: 499.00},
-    {propertySize: "Carpet Steam Clean (per room or area)", houseCleaning: 250.00, deepCleaning: 310.00, EOLcleaning: 550.00},
-    {propertySize: "Sliding Door & Interior Windows (1-3 Bedroom)", houseCleaning: 250.00, deepCleaning: 310.00, EOLcleaning: 550.00},
-    {propertySize: "Inside Cupboards (must be empty) (4-6 Bedroom)", houseCleaning: 250.00, deepCleaning: 310.00, EOLcleaning: 550.00},
-    {propertySize: "Inside Fridge", houseCleaning: 250.00, deepCleaning: 310.00, EOLcleaning: 550.00},
-    {propertySize: "Small Balcony", houseCleaning: 250.00, deepCleaning: 310.00, EOLcleaning: 550.00},
-    {propertySize: "Large Balcony", houseCleaning: 250.00, deepCleaning: 310.00, EOLcleaning: 550.00},
-    {propertySize: "Deck", houseCleaning: 250.00, deepCleaning: 310.00, EOLcleaning: 550.00},
-  ];
-
-
+  {service: "Wet Wipe Blinds (per blind)", houseCleaning: "$10.00", deepCleaning: "$10.00", EOLcleaning: "$10.00"},
+  {service: "Inside Oven", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "Included"},
+  {service: "Carpet Steam Clean (per room or area)", houseCleaning: "$35.00", deepCleaning: "$35.00", EOLcleaning: "$35.00"},
+  {service: "Sliding Door & Interior Windows (1-3 Bedroom)", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "Included"},
+  {service: "Sliding Door & Interior Windows (4-6 Bedroom)", houseCleaning: "$120.00", deepCleaning: "$120.00", EOLcleaning: "Included"},
+  {service: "Inside Cupboards (must be empty) (1-3 Bedroom)", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "Included"},
+  {service: "Inside Cupboards (must be empty) (4-6 Bedroom)", houseCleaning: "$120.00", deepCleaning: "$120.00", EOLcleaning: "Included"},
+  {service: "Garage Sweep & Tidy", houseCleaning: "$30.00", deepCleaning: "$30.00", EOLcleaning: "$30.00"},
+  {service: "Patio", houseCleaning: "$30.00", deepCleaning: "$30.00", EOLcleaning: "$30.00"},
+  {service: "Deck", houseCleaning: "$30.00", deepCleaning: "$30.00", EOLcleaning: "$30.00"},
+  {service: "Large Balcony", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "$60.00"},
+  {service: "Small Balcony", houseCleaning: "$30.00", deepCleaning: "$30.00", EOLcleaning: "$30.00"},
+  {service: "Inside Fridge", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "$60.00"},
+  {service: "Spot Clean Walls (30 Minutes)", houseCleaning: "$30.00", deepCleaning: "$30.00", EOLcleaning: "$30.00"},
+  {service: "Spot Clean Walls (1 Hour)", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "$60.00"},
+  {service: "Change Bed Sheets", houseCleaning: "$10.00", deepCleaning: "$10.00", EOLcleaning: "$10.00"},
+];
 
 export default function PriceList() {
   return (
@@ -74,9 +79,9 @@ export default function PriceList() {
                 {pricing.map((row,index) => (
                     <StyledTableRow key={index+1}>
                         <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
-                        <StyledTableCell align="center">${row.houseCleaning}.00</StyledTableCell>
-                        <StyledTableCell align="center">${row.deepCleaning}.00</StyledTableCell>
-                        <StyledTableCell align="center">${row.EOLcleaning}.00</StyledTableCell>
+                        <StyledTableCell align="center">{row.houseCleaning}</StyledTableCell>
+                        <StyledTableCell align="center">{row.deepCleaning}</StyledTableCell>
+                        <StyledTableCell align="center">{row.EOLcleaning}</StyledTableCell>
                     </StyledTableRow>
                 ))}
                 </TableBody>
@@ -100,10 +105,10 @@ export default function PriceList() {
                 <TableBody>
                 {services.map((row,index) => (
                     <StyledTableRow key={index+1}>
-                        <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
-                        <StyledTableCell align="center">${row.houseCleaning}.00</StyledTableCell>
-                        <StyledTableCell align="center">${row.deepCleaning}.00</StyledTableCell>
-                        <StyledTableCell align="center">${row.EOLcleaning}.00</StyledTableCell>
+                        <StyledTableCell align="center">{row.service}</StyledTableCell>
+                        <StyledTableCell align="center">{row.houseCleaning}</StyledTableCell>
+                        <StyledTableCell align="center">{row.deepCleaning}</StyledTableCell>
+                        <StyledTableCell align="center">{row.EOLcleaning}</StyledTableCell>
                     </StyledTableRow>
                 ))}
                 </TableBody>
