@@ -32,7 +32,6 @@ const page = (props: Props) => {
         <GetACall/>
         <WhatMakeUsDifferent/>
         <Stepper/>
-        <GetACall/>
         <PricingPlan/>
         {/* <ExServices/> */}
         <GetACall/>

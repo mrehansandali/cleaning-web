@@ -2,11 +2,11 @@
 
 .container{ 
     padding: 60px 0;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/images/bgImgBanner2.jpg");
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://www.shutterstock.com/shutterstock/photos/1791136307/display_1500/stock-photo-cleaners-clean-empty-office-space-photo-1791136307.jpg");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     .heading{
         margin: 0;
         text-align: center;
@@ -36,6 +36,8 @@
         th{
             font-size: 16px;
             font-family: $poppins_regular;
+            background-color: $tarcoal;
+            color: #fff;
         }
     }
     @media(max-width:768px){

@@ -28,7 +28,8 @@
     .about{
         display: flex;
         .img_1, .img_2{
-            width: 45%;
+            width: 45% !important;
+            height: auto !important;
             object-fit: cover;
         }
         .img_1{
@@ -60,7 +61,7 @@
             flex-direction: column;
             margin: 0 !important;
             .img_1, .img_2{
-                width: 100%;
+                width: 100% !important;
                 border-radius: 0;
             }
 
@@ -68,6 +69,9 @@
                 width: 100%;
                 border-radius: 0;
                 padding: 10px 15px;
+                p{
+                    font-size: 14px;
+                }
             }
         }
     }

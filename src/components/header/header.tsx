@@ -1,7 +1,5 @@
 import React from 'react'
 import styles from "./header.module.scss"
-import logo from "../../../public/images/logo.jpeg"
-import Image from 'next/image';
 import { RxHamburgerMenu } from "react-icons/rx";
 
 type Props = {}
@@ -14,14 +12,10 @@ const header = (props: Props) => {
             <nav className={`${styles.navbar} p-1 navbar navbar-expand-lg`}>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
-                        <Image
+                        <img
                         className={styles.logo}
                         alt="logo"
-                        src={logo}
-                        style={{
-                        height: 60,
-                        width: 60
-                        }}
+                        src='https://res.cloudinary.com/divbpcro8/image/upload/v1716553941/logo_hou6e7.jpg'
                         />
                     </a>
                     <div><RxHamburgerMenu className={styles.menu_icon} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" /></div>

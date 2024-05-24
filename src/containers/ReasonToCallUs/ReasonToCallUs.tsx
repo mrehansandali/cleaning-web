@@ -10,7 +10,6 @@ import Paper from '@mui/material/Paper';
 import { TiTick } from "react-icons/ti";
 import { RxCross1 } from "react-icons/rx";
 import styles from "./reasonToCallUs.module.scss"
-import GetACall from '../GetACall/GetACall';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {

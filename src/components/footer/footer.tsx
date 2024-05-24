@@ -16,14 +16,10 @@ const footer = (props: Props) => {
             <div className={`${styles.container} pb-4`}>            
                 <div className="row">
                     <div className={`${styles.col_1} col-md-7`}>
-                        <Image
+                        <img
                         className={styles.logo}
                         alt="logo"
-                        src={logo}
-                        style={{
-                        height: 90,
-                        width: 90
-                        }}
+                        src='https://res.cloudinary.com/divbpcro8/image/upload/v1716553941/logo_hou6e7.jpg'
                         />
                         <ul>
                             <li><div><IoLocationSharp className={`${styles.info_icons}`}/></div> Suite# 2/39 Marion St.Parramatta, NSW 2150</li>
