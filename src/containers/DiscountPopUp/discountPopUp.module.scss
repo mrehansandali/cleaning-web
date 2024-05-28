@@ -2,6 +2,7 @@
 
 .container{
     font-family: $poppins_regular;
+    background-color: rgba(0, 0, 0, 0.5);
     .box_container{
         position: absolute;
         top: 50%;
@@ -27,7 +28,7 @@
             width: 50%;
             background-color: #fff;
             color: #000;
-            padding: 80px 50px;
+            padding: 80px 25px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -51,7 +52,7 @@
             }
             .button{
                 font-size: 30px;
-                width: 100%;
+                width: 80%;
                 background-color: $yellow;
                 border: 0;
                 padding: 0px 20px;
@@ -69,6 +70,45 @@
             top: 10px;
             right: 20px;
             cursor: pointer;
+        }
+
+        @media (max-width:768px){
+            flex-direction: column;
+            width: 85%;
+            .item_1{
+                width: 100%;
+                img{
+                    border-top-right-radius: 15px;
+                    border-bottom-left-radius: 0;
+                }
+            }
+            .item_2{
+                width: 100%;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 15px;
+                text-align: center;
+                padding: 30px;
+
+                .heading{
+                    font-size: 28px;
+                    line-height: 22px;
+                }
+
+                .sub_heading{
+                    font-size: 16px;
+                }
+
+                .text{
+                    font-size: 14px;
+                }
+                .button{
+                    width: 100%;
+                }
+            }
+
+            .cross_container{
+                color: #fff;
+            }
         }
     }
 }
