@@ -13,7 +13,7 @@ export default function BasicModal() {
     useEffect(() => {
         setTimeout(() => {
             setPopUpShow(true)
-        }, 2000);
+        }, 8000);
     }, [])
     
 
