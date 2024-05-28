@@ -56,3 +56,69 @@
 .swiper-pagination{
     bottom: 0px !important;
 }
+
+
+///// main icon /////
+
+.call_container{
+    display: block;
+    border-radius: 50%;
+    background: linear-gradient(120deg, #fbd02b 0%, #d6b017 100%) !important;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 80px;
+    left: 80px;
+    z-index: 9999999;
+    .call_icon{
+        font-size: 30px;
+        color: #fff;
+    }
+    @media (max-width:768px){
+        left: 30px;
+        bottom: 30px;
+    }
+}
+
+.call_container::after {
+    content: "";
+    position: absolute;
+    border: 1px solid #fbd02b;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    border-radius: 50%;
+    animation: pulse 1s linear infinite;
+    animation-delay: 0.3s;
+    left: -35%;
+    top: -35%;
+}
+
+.call_container::before {
+    content: "";
+    position: absolute;
+    border: 1px solid #fbd02b;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    border-radius: 50%;
+    animation: pulse 1s linear infinite;
+    left: -35%;
+    top: -35%;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}

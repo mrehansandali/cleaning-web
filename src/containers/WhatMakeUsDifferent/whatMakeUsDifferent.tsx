@@ -10,8 +10,6 @@ import Paper from '@mui/material/Paper';
 import { TiTick } from "react-icons/ti";
 import { RxCross1 } from "react-icons/rx";
 import styles from "./whatMakeUsDifferent.module.scss"
-import bgimg from "../../../public/images/hero.jpg"
-import Image from 'next/image';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
