@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from 'react'
 import styles from "./discountPopUp.module.scss"
 import Box from '@mui/material/Box';
@@ -6,7 +7,7 @@ import { IoCall } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
 
 export default function BasicModal() {
-  const [popUpShow, setPopUpShow] = React.useState(false);
+  const [popUpShow, setPopUpShow] = useState(false);
 //   const handleOpen = () => setPopUpShow(true);
   const handleClose = () => setPopUpShow(false);
 

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Header from "../components/header/header"
 import Footer from "../components/footer/footer"
 import Script from "next/script";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "@/styles/_main.scss"
+import { IoCall } from "react-icons/io5";
 
 export const metadata: Metadata = {
   title: "Shah Cleaning Service",
@@ -18,7 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header/>
-        {children}
+        <main className="main">
+          {children}
+          <a className="call_container" href="tel:+923162007264"><IoCall className="call_icon"/></a>
+        </main>
         <Footer/>
         <Script 
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 

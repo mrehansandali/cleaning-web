@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "./header.module.scss"
 import { RxHamburgerMenu } from "react-icons/rx";
+import Link from 'next/link';
 
 type Props = {}
 
@@ -9,15 +10,15 @@ const header = (props: Props) => {
     return (
     <>
         <header>
-            <nav className={`${styles.navbar} p-1 navbar navbar-expand-lg`}>
+            <nav className={`${styles.navbar} p-1 navbar navbar-expand-md`}>
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
+                    <Link className="navbar-brand" href="/">
                         <img
                         className={styles.logo}
                         alt="logo"
                         src='https://res.cloudinary.com/divbpcro8/image/upload/v1716553941/logo_hou6e7.jpg'
                         />
-                    </a>
+                    </Link>
                     <div><RxHamburgerMenu className={styles.menu_icon} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" /></div>
                     <div className={`${styles.mbl_menu} collapse navbar-collapse`} id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -37,7 +38,7 @@ const header = (props: Props) => {
                             </ul>
                             </li>
                             <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">About Us</a></li>
-                            <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Prices</a></li>
+                            <li className="nav-item p-1"><Link className="nav-link active" aria-current="page" href="/prices">Prices</Link></li>
                             <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Reviews</a></li>
                             <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Contact Us</a></li>
                         </ul>

@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { IoCall } from "react-icons/io5";
 import FormComp from '@/containers/Form/FormComp';
 import Testimonail from '@/containers/Testimonial/Reviews';
 import BeforeAfter from "@/containers/BeforeVSAfter/BeforeAfter"
@@ -25,24 +24,21 @@ type Props = {}
 const page = (props: Props) => {
   return (
     <>
-      <main className="main">
-        <DiscountPopUp/>
-        <FormComp/>
-        <Testimonail/>
-        <BeforeAfter/>
-        <GetACall/>
-        <Services/>
-        <GetACall/>
-        <WhatMakeUsDifferent/>
-        <Stepper/>
-        <PricingPlan/>
-        {/* <ExServices/> */}
-        <GetACall/>
-        <PriceList/>
-        <OurGuarantee/>
-        <ReasonToCallUs/>
-        <a className="call_container" href="tel:+923162007264"><IoCall className="call_icon"/></a>
-      </main>
+      <DiscountPopUp/>
+      <FormComp/>
+      <Testimonail/>
+      <BeforeAfter/>
+      <GetACall/>
+      <Services/>
+      <GetACall/>
+      <WhatMakeUsDifferent/>
+      <Stepper/>
+      <PricingPlan/>
+      {/* <ExServices/> */}
+      <GetACall/>
+      <PriceList/>
+      <OurGuarantee/>
+      <ReasonToCallUs/>
     </>
   )
 }
