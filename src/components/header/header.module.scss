@@ -1,7 +1,11 @@
 @import '../../styles/variables';
 
 .navbar{
-    background-color: #000;
+    background: linear-gradient(120deg, #000 0%, $tarcoal 100%);
+    position: fixed !important;
+    right: 0;
+    left: 0;
+    z-index: 10;
 
     .logo{
         height: auto;
@@ -34,7 +38,7 @@
     .dropdown li a{
         color: #000 !important;
     }
-    @media(max-width:768px){
+    @media(max-width:991px){
         .mbl_menu{
             position: absolute;
             top: 76px;
@@ -44,6 +48,7 @@
             height: fit-content;
             padding: 15px 0 25px 0;
             text-align: center;
+            z-index: 10;
         }
 
         .menu_icon{

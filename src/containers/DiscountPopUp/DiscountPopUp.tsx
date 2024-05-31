@@ -6,24 +6,19 @@ import Modal from '@mui/material/Modal';
 import { IoCall } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
 
-export default function BasicModal() {
-  const [popUpShow, setPopUpShow] = useState(false);
-//   const handleOpen = () => setPopUpShow(true);
-  const handleClose = () => setPopUpShow(false);
+type Props = {
+  toggle: () => void,
+  isOpenPopup: boolean
+}
 
-    useEffect(() => {
-        setTimeout(() => {
-            setPopUpShow(true)
-        }, 8000);
-    }, [])
-    
+export default function BasicModal({toggle, isOpenPopup}: Props) {
 
   return (
     <>
         <Modal
         className={styles.container}
-        open={popUpShow}
-        onClose={handleClose}
+        open={isOpenPopup}
+        onClose={toggle}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         >
@@ -36,7 +31,7 @@ export default function BasicModal() {
                     <button className={`${styles.button}`}><IoCall/></button>
                     <p className={`${styles.close_text}`}>No, I'll Pay Full Price.</p>
                 </div>
-                <div onClick={() => handleClose()} className={`${styles.cross_container}`}><RxCross1 className={`${styles.cross_button}`}/></div>
+                <div onClick={() => toggle()} className={`${styles.cross_container}`}><RxCross1 className={`${styles.cross_button}`}/></div>
             </Box>
         </Modal>
     </>

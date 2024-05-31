@@ -17,14 +17,12 @@ import PricingPlan from '@/containers/PricingPlan/PricingPlan';
 import PriceList from '@/containers/PriceList/PriceList';
 import ReasonToCallUs from '@/containers/ReasonToCallUs/ReasonToCallUs';
 import OurGuarantee from '@/containers/OurGuarantee/OurGuarantee';
-import DiscountPopUp from '@/containers/DiscountPopUp/DiscountPopUp';
 
 type Props = {}
 
 const page = (props: Props) => {
   return (
     <>
-      <DiscountPopUp/>
       <FormComp/>
       <Testimonail/>
       <BeforeAfter/>
