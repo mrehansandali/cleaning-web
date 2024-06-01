@@ -112,249 +112,252 @@ export default function priceIndex() {
     <>
     
     {windowWidth >= 992 ? (
-        <div className="container">
-          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: "center" }}>
-            <Tabs
-              orientation="vertical"
-              value={value}
-              onChange={handleChange}
-              textColor="inherit"
-              aria-label="Vertical tabs example"
-              sx={{bgcolor: "#112A46", color: "#fff"}}
-            >
-              <Tab sx={{justifyContent: "flex-start"}} className='text-left' label="House Cleaning" icon={<FaHome style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(0)} />
-              <Tab sx={{justifyContent: "flex-start"}} label="Deep Cleaning" icon={<FaBroom style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(1)} />
-              <Tab sx={{justifyContent: "flex-start"}} label="End Of Lease Cleaning" icon={<PiSprayBottleFill style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(2)} />
-              <Tab sx={{justifyContent: "flex-start"}} label="Regular Cleaning" icon={<GiGloves style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(3)} />
-              <Tab sx={{justifyContent: "flex-start"}} label="Carpet Cleaning" icon={<GiVacuumCleaner style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(4)} />
-              <Tab sx={{justifyContent: "flex-start"}} label="Mattress Cleaning" icon={<IoIosBed style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(5)} />
-              <Tab sx={{justifyContent: "flex-start"}} label="Rug Cleaning" icon={<FaRug style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(6)} />
-              <Tab sx={{justifyContent: "flex-start"}} label="Upholstery Cleaning" icon={<GiSofa style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(7)} />
-              <Tab sx={{justifyContent: "flex-start"}} label="Construction Cleaning" icon={<FaBuilding style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(8)} />
-            </Tabs>
+      <div className="container">
+        <h1 className='py-3 text-center'>Pricing</h1>
+        <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: "center" }}>
+          <Tabs
+            orientation="vertical"
+            value={value}
+            onChange={handleChange}
+            textColor="inherit"
+            aria-label="Vertical tabs example"
+            sx={{bgcolor: "#112A46", color: "#fff"}}
+          >
+            <Tab sx={{justifyContent: "flex-start"}} className='text-left' label="House Cleaning" icon={<FaHome style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(0)} />
+            <Tab sx={{justifyContent: "flex-start"}} label="Deep Cleaning" icon={<FaBroom style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(1)} />
+            <Tab sx={{justifyContent: "flex-start"}} label="End Of Lease Cleaning" icon={<PiSprayBottleFill style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(2)} />
+            <Tab sx={{justifyContent: "flex-start"}} label="Regular Cleaning" icon={<GiGloves style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(3)} />
+            <Tab sx={{justifyContent: "flex-start"}} label="Carpet Cleaning" icon={<GiVacuumCleaner style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(4)} />
+            <Tab sx={{justifyContent: "flex-start"}} label="Mattress Cleaning" icon={<IoIosBed style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(5)} />
+            <Tab sx={{justifyContent: "flex-start"}} label="Rug Cleaning" icon={<FaRug style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(6)} />
+            <Tab sx={{justifyContent: "flex-start"}} label="Upholstery Cleaning" icon={<GiSofa style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(7)} />
+            <Tab sx={{justifyContent: "flex-start"}} label="Construction Cleaning" icon={<FaBuilding style={{marginTop: "-5px", fontSize:"25px"}}/>} iconPosition="start" {...a11yProps(8)} />
+          </Tabs>
 
 
-            <TabPanel value={value} index={0}>
-              <h2 className={`${styles.heading}`}>House Cleaning Service Prices</h2>
-              <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 300 }} aria-label="customized table">
-                  <TableHead>
-                  <TableRow>
-                      <StyledTableCell align="center">Property Size</StyledTableCell>
-                      <StyledTableCell align="center">Price</StyledTableCell>
-                  </TableRow>
-                  </TableHead>
-                  <TableBody>
-                  {houseCleaningPrices.map((row, index) => (
-                      <StyledTableRow key={index+1}>
-                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
-                      <StyledTableCell align="center">{row.price}</StyledTableCell>
-                      </StyledTableRow>
-                  ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </TabPanel>
-
-
-
-
-            <TabPanel value={value} index={1}>
-              <h2 className={`${styles.heading}`}>Deep Cleaning Service Prices</h2>
-              <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 300 }} aria-label="customized table">
-                  <TableHead>
-                  <TableRow>
-                      <StyledTableCell align="center">Property Size</StyledTableCell>
-                      <StyledTableCell align="center">Price</StyledTableCell>
-                  </TableRow>
-                  </TableHead>
-                  <TableBody>
-                  {houseCleaningPrices.map((row, index) => (
-                      <StyledTableRow key={index+1}>
-                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
-                      <StyledTableCell align="center">{row.price}</StyledTableCell>
-                      </StyledTableRow>
-                  ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </TabPanel>
+          <TabPanel value={value} index={0}>
+            <h2 className={`${styles.heading}`}>House Cleaning Service Prices</h2>
+            <TableContainer className={`${styles.table_container}`}>
+              <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <TableHead>
+                <TableRow>
+                    <StyledTableCell align="center">Property Size</StyledTableCell>
+                    <StyledTableCell align="center">Price</StyledTableCell>
+                </TableRow>
+                </TableHead>
+                <TableBody>
+                {houseCleaningPrices.map((row, index) => (
+                    <StyledTableRow key={index+1}>
+                    <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                    <StyledTableCell align="center">{row.price}</StyledTableCell>
+                    </StyledTableRow>
+                ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </TabPanel>
 
 
 
-            <TabPanel value={value} index={2}>
-              <h2 className={`${styles.heading}`}>End Of Lease Cleaning Service Prices</h2>
-              <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 300 }} aria-label="customized table">
-                  <TableHead>
-                  <TableRow>
-                      <StyledTableCell align="center">Property Size</StyledTableCell>
-                      <StyledTableCell align="center">Price</StyledTableCell>
-                  </TableRow>
-                  </TableHead>
-                  <TableBody>
-                  {houseCleaningPrices.map((row, index) => (
-                      <StyledTableRow key={index+1}>
-                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
-                      <StyledTableCell align="center">{row.price}</StyledTableCell>
-                      </StyledTableRow>
-                  ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </TabPanel>
+
+          <TabPanel value={value} index={1}>
+            <h2 className={`${styles.heading}`}>Deep Cleaning Service Prices</h2>
+            <TableContainer className={`${styles.table_container}`}>
+              <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <TableHead>
+                <TableRow>
+                    <StyledTableCell align="center">Property Size</StyledTableCell>
+                    <StyledTableCell align="center">Price</StyledTableCell>
+                </TableRow>
+                </TableHead>
+                <TableBody>
+                {houseCleaningPrices.map((row, index) => (
+                    <StyledTableRow key={index+1}>
+                    <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                    <StyledTableCell align="center">{row.price}</StyledTableCell>
+                    </StyledTableRow>
+                ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </TabPanel>
 
 
 
-            <TabPanel value={value} index={3}>
-              <h2 className={`${styles.heading}`}>Regular Cleaning Service Prices</h2>
-              <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 300 }} aria-label="customized table">
-                  <TableHead>
-                  <TableRow>
-                      <StyledTableCell align="center">Property Size</StyledTableCell>
-                      <StyledTableCell align="center">Price</StyledTableCell>
-                  </TableRow>
-                  </TableHead>
-                  <TableBody>
-                  {houseCleaningPrices.map((row, index) => (
-                      <StyledTableRow key={index+1}>
-                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
-                      <StyledTableCell align="center">{row.price}</StyledTableCell>
-                      </StyledTableRow>
-                  ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </TabPanel>
+          <TabPanel value={value} index={2}>
+            <h2 className={`${styles.heading}`}>End Of Lease Cleaning Service Prices</h2>
+            <TableContainer className={`${styles.table_container}`}>
+              <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <TableHead>
+                <TableRow>
+                    <StyledTableCell align="center">Property Size</StyledTableCell>
+                    <StyledTableCell align="center">Price</StyledTableCell>
+                </TableRow>
+                </TableHead>
+                <TableBody>
+                {houseCleaningPrices.map((row, index) => (
+                    <StyledTableRow key={index+1}>
+                    <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                    <StyledTableCell align="center">{row.price}</StyledTableCell>
+                    </StyledTableRow>
+                ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </TabPanel>
 
 
 
-            <TabPanel value={value} index={4}>
-              <h2 className={`${styles.heading}`}>Carpet Cleaning Service Prices</h2>
-              <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 300 }} aria-label="customized table">
-                  <TableHead>
-                  <TableRow>
-                      <StyledTableCell align="center">Property Size</StyledTableCell>
-                      <StyledTableCell align="center">Price</StyledTableCell>
-                  </TableRow>
-                  </TableHead>
-                  <TableBody>
-                  {houseCleaningPrices.map((row, index) => (
-                      <StyledTableRow key={index+1}>
-                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
-                      <StyledTableCell align="center">{row.price}</StyledTableCell>
-                      </StyledTableRow>
-                  ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </TabPanel>
+          <TabPanel value={value} index={3}>
+            <h2 className={`${styles.heading}`}>Regular Cleaning Service Prices</h2>
+            <TableContainer className={`${styles.table_container}`}>
+              <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <TableHead>
+                <TableRow>
+                    <StyledTableCell align="center">Property Size</StyledTableCell>
+                    <StyledTableCell align="center">Price</StyledTableCell>
+                </TableRow>
+                </TableHead>
+                <TableBody>
+                {houseCleaningPrices.map((row, index) => (
+                    <StyledTableRow key={index+1}>
+                    <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                    <StyledTableCell align="center">{row.price}</StyledTableCell>
+                    </StyledTableRow>
+                ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </TabPanel>
 
 
 
-            <TabPanel value={value} index={5}>
-              <h2 className={`${styles.heading}`}>Mattress Cleaning Service Prices</h2>
-              <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 300 }} aria-label="customized table">
-                  <TableHead>
-                  <TableRow>
-                      <StyledTableCell align="center">Property Size</StyledTableCell>
-                      <StyledTableCell align="center">Price</StyledTableCell>
-                  </TableRow>
-                  </TableHead>
-                  <TableBody>
-                  {houseCleaningPrices.map((row, index) => (
-                      <StyledTableRow key={index+1}>
-                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
-                      <StyledTableCell align="center">{row.price}</StyledTableCell>
-                      </StyledTableRow>
-                  ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </TabPanel>
+          <TabPanel value={value} index={4}>
+            <h2 className={`${styles.heading}`}>Carpet Cleaning Service Prices</h2>
+            <TableContainer className={`${styles.table_container}`}>
+              <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <TableHead>
+                <TableRow>
+                    <StyledTableCell align="center">Property Size</StyledTableCell>
+                    <StyledTableCell align="center">Price</StyledTableCell>
+                </TableRow>
+                </TableHead>
+                <TableBody>
+                {houseCleaningPrices.map((row, index) => (
+                    <StyledTableRow key={index+1}>
+                    <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                    <StyledTableCell align="center">{row.price}</StyledTableCell>
+                    </StyledTableRow>
+                ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </TabPanel>
 
 
 
-            <TabPanel value={value} index={6}>
-              <h2 className={`${styles.heading}`}>Rug Cleaning Service Prices</h2>
-              <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 300 }} aria-label="customized table">
-                  <TableHead>
-                  <TableRow>
-                      <StyledTableCell align="center">Property Size</StyledTableCell>
-                      <StyledTableCell align="center">Price</StyledTableCell>
-                  </TableRow>
-                  </TableHead>
-                  <TableBody>
-                  {houseCleaningPrices.map((row, index) => (
-                      <StyledTableRow key={index+1}>
-                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
-                      <StyledTableCell align="center">{row.price}</StyledTableCell>
-                      </StyledTableRow>
-                  ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </TabPanel>
+          <TabPanel value={value} index={5}>
+            <h2 className={`${styles.heading}`}>Mattress Cleaning Service Prices</h2>
+            <TableContainer className={`${styles.table_container}`}>
+              <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <TableHead>
+                <TableRow>
+                    <StyledTableCell align="center">Property Size</StyledTableCell>
+                    <StyledTableCell align="center">Price</StyledTableCell>
+                </TableRow>
+                </TableHead>
+                <TableBody>
+                {houseCleaningPrices.map((row, index) => (
+                    <StyledTableRow key={index+1}>
+                    <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                    <StyledTableCell align="center">{row.price}</StyledTableCell>
+                    </StyledTableRow>
+                ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </TabPanel>
 
 
 
-            <TabPanel value={value} index={7}>
-              <h2 className={`${styles.heading}`}>Upholstery Cleaning Service Prices</h2>
-              <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 300 }} aria-label="customized table">
-                  <TableHead>
-                  <TableRow>
-                      <StyledTableCell align="center">Property Size</StyledTableCell>
-                      <StyledTableCell align="center">Price</StyledTableCell>
-                  </TableRow>
-                  </TableHead>
-                  <TableBody>
-                  {houseCleaningPrices.map((row, index) => (
-                      <StyledTableRow key={index+1}>
-                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
-                      <StyledTableCell align="center">{row.price}</StyledTableCell>
-                      </StyledTableRow>
-                  ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </TabPanel>
+          <TabPanel value={value} index={6}>
+            <h2 className={`${styles.heading}`}>Rug Cleaning Service Prices</h2>
+            <TableContainer className={`${styles.table_container}`}>
+              <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <TableHead>
+                <TableRow>
+                    <StyledTableCell align="center">Property Size</StyledTableCell>
+                    <StyledTableCell align="center">Price</StyledTableCell>
+                </TableRow>
+                </TableHead>
+                <TableBody>
+                {houseCleaningPrices.map((row, index) => (
+                    <StyledTableRow key={index+1}>
+                    <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                    <StyledTableCell align="center">{row.price}</StyledTableCell>
+                    </StyledTableRow>
+                ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </TabPanel>
 
 
 
-            <TabPanel value={value} index={8}>
-              <h2 className={`${styles.heading}`}>Construction Cleaning Service Prices</h2>
-              <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 300 }} aria-label="customized table">
-                  <TableHead>
-                  <TableRow>
-                      <StyledTableCell align="center">Property Size</StyledTableCell>
-                      <StyledTableCell align="center">Price</StyledTableCell>
-                  </TableRow>
-                  </TableHead>
-                  <TableBody>
-                  {houseCleaningPrices.map((row, index) => (
-                      <StyledTableRow key={index+1}>
-                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
-                      <StyledTableCell align="center">{row.price}</StyledTableCell>
-                      </StyledTableRow>
-                  ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </TabPanel>
+          <TabPanel value={value} index={7}>
+            <h2 className={`${styles.heading}`}>Upholstery Cleaning Service Prices</h2>
+            <TableContainer className={`${styles.table_container}`}>
+              <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <TableHead>
+                <TableRow>
+                    <StyledTableCell align="center">Property Size</StyledTableCell>
+                    <StyledTableCell align="center">Price</StyledTableCell>
+                </TableRow>
+                </TableHead>
+                <TableBody>
+                {houseCleaningPrices.map((row, index) => (
+                    <StyledTableRow key={index+1}>
+                    <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                    <StyledTableCell align="center">{row.price}</StyledTableCell>
+                    </StyledTableRow>
+                ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </TabPanel>
 
 
 
-          </Box>
-        </div>
+          <TabPanel value={value} index={8}>
+            <h2 className={`${styles.heading}`}>Construction Cleaning Service Prices</h2>
+            <TableContainer className={`${styles.table_container}`}>
+              <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <TableHead>
+                <TableRow>
+                    <StyledTableCell align="center">Property Size</StyledTableCell>
+                    <StyledTableCell align="center">Price</StyledTableCell>
+                </TableRow>
+                </TableHead>
+                <TableBody>
+                {houseCleaningPrices.map((row, index) => (
+                    <StyledTableRow key={index+1}>
+                    <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                    <StyledTableCell align="center">{row.price}</StyledTableCell>
+                    </StyledTableRow>
+                ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </TabPanel>
+
+
+
+        </Box>
+      </div>
       ) : (
-      <div className={`${styles.mbl_container} container-fluid`}>
+      <div className={`${styles.mbl_container}`}>
+        <h1 className={`${styles.mbl_heading}`}>Pricing</h1>
+        <div className={`${styles.accordion_container} container-fluid`}>
           <Accordion>
             <AccordionSummary
               expandIcon={<FaAngleDown className={`${styles.accordion_icon}`} />}
@@ -519,7 +522,7 @@ export default function priceIndex() {
               <h3 className={`${styles.accordion_heading}`}><IoIosBed className={`${styles.heading_icon} me-3`}/> Mattress Cleaning</h3>
             </AccordionSummary>
             <AccordionDetails>
-             <TableContainer className={`${styles.table_container}`}>
+              <TableContainer className={`${styles.table_container}`}>
                 <Table sx={{ minWidth: 300 }} aria-label="customized table">
                   <TableHead>
                   <TableRow>
@@ -634,6 +637,7 @@ export default function priceIndex() {
               </TableContainer>
             </AccordionDetails>
           </Accordion>
+          </div>
         </div>
       )}
 
