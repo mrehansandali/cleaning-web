@@ -10,8 +10,11 @@ import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 import styles from "./pricesPage.module.scss"
-import { FaBroom, FaBuilding, FaHome } from "react-icons/fa";
+import { FaAngleDown, FaBroom, FaBuilding, FaHome } from "react-icons/fa";
 import { PiSprayBottleFill } from 'react-icons/pi';
 import { GiGloves, GiSofa, GiVacuumCleaner } from 'react-icons/gi';
 import { IoIosBed } from 'react-icons/io';
@@ -134,7 +137,7 @@ export default function priceIndex() {
             <TabPanel value={value} index={0}>
               <h2 className={`${styles.heading}`}>House Cleaning Service Prices</h2>
               <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
                   <TableHead>
                   <TableRow>
                       <StyledTableCell align="center">Property Size</StyledTableCell>
@@ -159,7 +162,7 @@ export default function priceIndex() {
             <TabPanel value={value} index={1}>
               <h2 className={`${styles.heading}`}>Deep Cleaning Service Prices</h2>
               <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
                   <TableHead>
                   <TableRow>
                       <StyledTableCell align="center">Property Size</StyledTableCell>
@@ -183,7 +186,7 @@ export default function priceIndex() {
             <TabPanel value={value} index={2}>
               <h2 className={`${styles.heading}`}>End Of Lease Cleaning Service Prices</h2>
               <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
                   <TableHead>
                   <TableRow>
                       <StyledTableCell align="center">Property Size</StyledTableCell>
@@ -207,7 +210,7 @@ export default function priceIndex() {
             <TabPanel value={value} index={3}>
               <h2 className={`${styles.heading}`}>Regular Cleaning Service Prices</h2>
               <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
                   <TableHead>
                   <TableRow>
                       <StyledTableCell align="center">Property Size</StyledTableCell>
@@ -231,7 +234,7 @@ export default function priceIndex() {
             <TabPanel value={value} index={4}>
               <h2 className={`${styles.heading}`}>Carpet Cleaning Service Prices</h2>
               <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
                   <TableHead>
                   <TableRow>
                       <StyledTableCell align="center">Property Size</StyledTableCell>
@@ -255,7 +258,7 @@ export default function priceIndex() {
             <TabPanel value={value} index={5}>
               <h2 className={`${styles.heading}`}>Mattress Cleaning Service Prices</h2>
               <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
                   <TableHead>
                   <TableRow>
                       <StyledTableCell align="center">Property Size</StyledTableCell>
@@ -279,7 +282,7 @@ export default function priceIndex() {
             <TabPanel value={value} index={6}>
               <h2 className={`${styles.heading}`}>Rug Cleaning Service Prices</h2>
               <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
                   <TableHead>
                   <TableRow>
                       <StyledTableCell align="center">Property Size</StyledTableCell>
@@ -303,7 +306,7 @@ export default function priceIndex() {
             <TabPanel value={value} index={7}>
               <h2 className={`${styles.heading}`}>Upholstery Cleaning Service Prices</h2>
               <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
                   <TableHead>
                   <TableRow>
                       <StyledTableCell align="center">Property Size</StyledTableCell>
@@ -327,7 +330,7 @@ export default function priceIndex() {
             <TabPanel value={value} index={8}>
               <h2 className={`${styles.heading}`}>Construction Cleaning Service Prices</h2>
               <TableContainer className={`${styles.table_container}`}>
-                <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
                   <TableHead>
                   <TableRow>
                       <StyledTableCell align="center">Property Size</StyledTableCell>
@@ -351,8 +354,286 @@ export default function priceIndex() {
           </Box>
         </div>
       ) : (
-      <div className='container-fluid'>
-          <p className='text-center pt-3'>Maintenance...</p>
+      <div className={`${styles.mbl_container} container-fluid`}>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<FaAngleDown className={`${styles.accordion_icon}`} />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <h3 className={`${styles.accordion_heading}`}><FaHome className={`${styles.heading_icon} me-3`}/> House Cleaning</h3>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer className={`${styles.table_container}`}>
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
+                  <TableHead>
+                  <TableRow>
+                      <StyledTableCell align="center">Property Size</StyledTableCell>
+                      <StyledTableCell align="center">Price</StyledTableCell>
+                  </TableRow>
+                  </TableHead>
+                  <TableBody>
+                  {houseCleaningPrices.map((row, index) => (
+                      <StyledTableRow key={index+1}>
+                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                      <StyledTableCell align="center">{row.price}</StyledTableCell>
+                      </StyledTableRow>
+                  ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
+
+
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<FaAngleDown className={`${styles.accordion_icon}`} />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <h3 className={`${styles.accordion_heading}`}><FaBroom className={`${styles.heading_icon} me-3`}/> Deep Cleaning</h3>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer className={`${styles.table_container}`}>
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
+                  <TableHead>
+                  <TableRow>
+                      <StyledTableCell align="center">Property Size</StyledTableCell>
+                      <StyledTableCell align="center">Price</StyledTableCell>
+                  </TableRow>
+                  </TableHead>
+                  <TableBody>
+                  {houseCleaningPrices.map((row, index) => (
+                      <StyledTableRow key={index+1}>
+                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                      <StyledTableCell align="center">{row.price}</StyledTableCell>
+                      </StyledTableRow>
+                  ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
+
+
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<FaAngleDown className={`${styles.accordion_icon}`} />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <h3 className={`${styles.accordion_heading}`}><PiSprayBottleFill className={`${styles.heading_icon} me-3`}/> End Of Lease Cleaning</h3>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer className={`${styles.table_container}`}>
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
+                  <TableHead>
+                  <TableRow>
+                      <StyledTableCell align="center">Property Size</StyledTableCell>
+                      <StyledTableCell align="center">Price</StyledTableCell>
+                  </TableRow>
+                  </TableHead>
+                  <TableBody>
+                  {houseCleaningPrices.map((row, index) => (
+                      <StyledTableRow key={index+1}>
+                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                      <StyledTableCell align="center">{row.price}</StyledTableCell>
+                      </StyledTableRow>
+                  ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
+
+
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<FaAngleDown className={`${styles.accordion_icon}`} />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <h3 className={`${styles.accordion_heading}`}><GiGloves className={`${styles.heading_icon} me-3`}/> Regular Cleaning</h3>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer className={`${styles.table_container}`}>
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
+                  <TableHead>
+                  <TableRow>
+                      <StyledTableCell align="center">Property Size</StyledTableCell>
+                      <StyledTableCell align="center">Price</StyledTableCell>
+                  </TableRow>
+                  </TableHead>
+                  <TableBody>
+                  {houseCleaningPrices.map((row, index) => (
+                      <StyledTableRow key={index+1}>
+                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                      <StyledTableCell align="center">{row.price}</StyledTableCell>
+                      </StyledTableRow>
+                  ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
+
+
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<FaAngleDown className={`${styles.accordion_icon}`} />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <h3 className={`${styles.accordion_heading}`}><GiVacuumCleaner className={`${styles.heading_icon} me-3`}/> Carpet Cleaning</h3>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer className={`${styles.table_container}`}>
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
+                  <TableHead>
+                  <TableRow>
+                      <StyledTableCell align="center">Property Size</StyledTableCell>
+                      <StyledTableCell align="center">Price</StyledTableCell>
+                  </TableRow>
+                  </TableHead>
+                  <TableBody>
+                  {houseCleaningPrices.map((row, index) => (
+                      <StyledTableRow key={index+1}>
+                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                      <StyledTableCell align="center">{row.price}</StyledTableCell>
+                      </StyledTableRow>
+                  ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
+
+
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<FaAngleDown className={`${styles.accordion_icon}`} />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <h3 className={`${styles.accordion_heading}`}><IoIosBed className={`${styles.heading_icon} me-3`}/> Mattress Cleaning</h3>
+            </AccordionSummary>
+            <AccordionDetails>
+             <TableContainer className={`${styles.table_container}`}>
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
+                  <TableHead>
+                  <TableRow>
+                      <StyledTableCell align="center">Property Size</StyledTableCell>
+                      <StyledTableCell align="center">Price</StyledTableCell>
+                  </TableRow>
+                  </TableHead>
+                  <TableBody>
+                  {houseCleaningPrices.map((row, index) => (
+                      <StyledTableRow key={index+1}>
+                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                      <StyledTableCell align="center">{row.price}</StyledTableCell>
+                      </StyledTableRow>
+                  ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
+
+
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<FaAngleDown className={`${styles.accordion_icon}`} />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <h3 className={`${styles.accordion_heading}`}><FaRug className={`${styles.heading_icon} me-3`}/> Rug Cleaning</h3>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer className={`${styles.table_container}`}>
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
+                  <TableHead>
+                  <TableRow>
+                      <StyledTableCell align="center">Property Size</StyledTableCell>
+                      <StyledTableCell align="center">Price</StyledTableCell>
+                  </TableRow>
+                  </TableHead>
+                  <TableBody>
+                  {houseCleaningPrices.map((row, index) => (
+                      <StyledTableRow key={index+1}>
+                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                      <StyledTableCell align="center">{row.price}</StyledTableCell>
+                      </StyledTableRow>
+                  ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
+
+
+
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<FaAngleDown className={`${styles.accordion_icon}`} />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <h3 className={`${styles.accordion_heading}`}><GiSofa className={`${styles.heading_icon} me-3`}/> Upholstery Cleaning</h3>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer className={`${styles.table_container}`}>
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
+                  <TableHead>
+                  <TableRow>
+                      <StyledTableCell align="center">Property Size</StyledTableCell>
+                      <StyledTableCell align="center">Price</StyledTableCell>
+                  </TableRow>
+                  </TableHead>
+                  <TableBody>
+                  {houseCleaningPrices.map((row, index) => (
+                      <StyledTableRow key={index+1}>
+                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                      <StyledTableCell align="center">{row.price}</StyledTableCell>
+                      </StyledTableRow>
+                  ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
+
+
+
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<FaAngleDown className={`${styles.accordion_icon}`} />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <h3 className={`${styles.accordion_heading}`}><FaBuilding className={`${styles.heading_icon} me-3`}/> Construction Cleaning</h3>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer className={`${styles.table_container}`}>
+                <Table sx={{ minWidth: 300 }} aria-label="customized table">
+                  <TableHead>
+                  <TableRow>
+                      <StyledTableCell align="center">Property Size</StyledTableCell>
+                      <StyledTableCell align="center">Price</StyledTableCell>
+                  </TableRow>
+                  </TableHead>
+                  <TableBody>
+                  {houseCleaningPrices.map((row, index) => (
+                      <StyledTableRow key={index+1}>
+                      <StyledTableCell align="center">{row.propertySize}</StyledTableCell>
+                      <StyledTableCell align="center">{row.price}</StyledTableCell>
+                      </StyledTableRow>
+                  ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
         </div>
       )}
 

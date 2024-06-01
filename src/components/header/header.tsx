@@ -21,7 +21,7 @@ const header = (props: Props) => {
     <>
         <header>
             <nav className={`${styles.navbar} p-1 navbar navbar-expand-lg`}>
-                <div className="container-fluid">
+                <div className="container">
                     <Link className="navbar-brand" href="/">
                         <img
                         className={styles.logo}
