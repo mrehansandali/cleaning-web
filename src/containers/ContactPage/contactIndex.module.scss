@@ -1,0 +1,89 @@
+@import '../../styles/variables';
+
+
+.page_heading{
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/divbpcro8/image/upload/v1717424947/headingBanner_gge2qm.jpg");
+    background-position: center 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+    @media(max-width:768px){
+        padding: 30px 0;
+    }
+}
+
+
+.container{ 
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .office{
+        width: 50%;
+
+        .heading{
+            text-align: center;
+        }
+        .details{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            .icon{
+                align-self: flex-start;
+                font-size: 20px;
+                color: $yellow;
+            }
+            .detail{
+
+                h3{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .getInTouch{
+        width: 50%;
+
+        .heading{
+            text-align: center;
+        }
+
+        .form_container{
+            padding: 15px;
+            background-color: rgba(196, 190, 190, 0.3411764706);
+            border: 1px solid #ffffff;
+
+            .submitBtn{
+                padding: 5px 20px;
+                background-color: #112A46;
+                color: #fff;
+                border: none;
+                margin: auto;
+                border-radius: 5px;
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    @media(max-width:768px){
+        flex-direction: column-reverse;
+        gap: 30px;
+
+        .office{
+            width: 100%;
+        }
+
+        .getInTouch{
+            width: 100%;
+        }
+    }
+}
