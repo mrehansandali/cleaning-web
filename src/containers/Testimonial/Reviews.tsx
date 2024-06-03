@@ -42,7 +42,7 @@ const Reviews = (props: Props) => {
   
   return (
     <>
-      <div className="container my-5">
+      <div className="container mt-5">
         <h2 className={`${styles.heading}`}>What our clients have to say</h2>
         <div className={styles.swiper_container}>
           <Swiper

@@ -48,8 +48,8 @@ const header = (props: Props) => {
                             </ul>
                             </li>
                             <li className="nav-item p-1"><Link className="nav-link active" aria-current="page" href="/prices">Prices</Link></li>
-                            <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Reviews</a></li>
-                            <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">About Us</a></li>
+                            {/* <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Reviews</a></li> */}
+                            <li className="nav-item p-1"><Link className="nav-link active" aria-current="page" href="/about">About Us</Link></li>
                             <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Contact Us</a></li>
                         </ul>
                         <div>

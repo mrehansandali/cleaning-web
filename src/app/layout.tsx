@@ -4,6 +4,9 @@ import Footer from "../components/footer/footer"
 import Script from "next/script";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "@/styles/_main.scss"
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import { IoCall } from "react-icons/io5";
 
 export const metadata: Metadata = {

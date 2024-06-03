@@ -111,9 +111,9 @@ export default function priceIndex() {
   return (
     <>
     
+    <h1 className={`${styles.page_heading}`}>Pricing</h1>
     {windowWidth >= 992 ? (
       <div className="container">
-        <h1 className='py-3 text-center'>Pricing</h1>
         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: "center" }}>
           <Tabs
             orientation="vertical"
@@ -356,7 +356,6 @@ export default function priceIndex() {
       </div>
       ) : (
       <div className={`${styles.mbl_container}`}>
-        <h1 className={`${styles.mbl_heading}`}>Pricing</h1>
         <div className={`${styles.accordion_container} container-fluid`}>
           <Accordion>
             <AccordionSummary
