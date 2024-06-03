@@ -21,7 +21,7 @@ const AboutIndex = (props: Props) => {
             </div>
 
 
-            <div className={`${styles.about} mb-4`}>
+            <div className={`${styles.about}`}>
                 <img className={`${styles.img_1}`} src='https://res.cloudinary.com/divbpcro8/image/upload/v1717416461/whychoose_vxjfcu.jpg'/>
                 <div className={`${styles.content_1}`}>
                     <h4>Why choose Shah Cleaning Services?</h4>

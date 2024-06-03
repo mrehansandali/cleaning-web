@@ -50,7 +50,7 @@ const header = (props: Props) => {
                             <li className="nav-item p-1"><Link className="nav-link active" aria-current="page" href="/prices">Prices</Link></li>
                             {/* <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Reviews</a></li> */}
                             <li className="nav-item p-1"><Link className="nav-link active" aria-current="page" href="/about">About Us</Link></li>
-                            <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Contact Us</a></li>
+                            <li className="nav-item p-1"><Link className="nav-link active" aria-current="page" href="/contact">Contact Us</Link></li>
                         </ul>
                         <div>
                             <button onClick={() => setPopUpShow(!popUpShow)} className={styles.btn}>Get 20% OFF</button>
