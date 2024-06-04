@@ -2,7 +2,7 @@
 
 .container{ 
     padding: 60px 0;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://www.shutterstock.com/shutterstock/photos/1430294426/display_1500/stock-photo-woman-hoovering-carpet-in-living-room-cleaning-service-1430294426.jpg");
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://res.cloudinary.com/divbpcro8/image/upload/v1717416633/ourMission_g0jwad.jpg");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,6 +25,8 @@
         th{
             font-size: 16px;
             font-family: $poppins_regular;
+            background-color: $yellow;
+            color: #000;
         }
     }
     @media(max-width:768px){
