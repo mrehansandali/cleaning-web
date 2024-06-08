@@ -38,7 +38,17 @@ const BeforeAfter = (props: Props) => {
         },
         {
           imageSrc: "https://i.pinimg.com/originals/51/4b/71/514b71436c54de206123f59a217ec519.jpg"
-        }
+        },
+        {imageSrc: "https://res.cloudinary.com/divbpcro8/image/upload/v1717871349/10_dcxi4v.png"},
+        {imageSrc: "https://res.cloudinary.com/divbpcro8/image/upload/v1717871348/9_uhr1cx.png"},
+        {imageSrc: "https://res.cloudinary.com/divbpcro8/image/upload/v1717871347/7_bye0ee.png"},
+        {imageSrc: "https://res.cloudinary.com/divbpcro8/image/upload/v1717871346/6_dgxpxa.png"},
+        {imageSrc: "https://res.cloudinary.com/divbpcro8/image/upload/v1717871342/2_jau2rc.png"},
+        {imageSrc: "https://res.cloudinary.com/divbpcro8/image/upload/v1717871347/8_belsyw.png"},
+        {imageSrc: "https://res.cloudinary.com/divbpcro8/image/upload/v1717871345/5_hyyz1t.png"},
+        {imageSrc: "https://res.cloudinary.com/divbpcro8/image/upload/v1717871344/4_e8okbb.png"},
+        {imageSrc: "https://res.cloudinary.com/divbpcro8/image/upload/v1717871344/3_qeryct.png"},
+        {imageSrc: "https://res.cloudinary.com/divbpcro8/image/upload/v1717871341/1_ezkixy.png"}
       ];
       
 
