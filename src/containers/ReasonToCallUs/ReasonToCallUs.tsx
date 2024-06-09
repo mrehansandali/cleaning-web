@@ -45,16 +45,16 @@ const rows = [
 
 export default function ReasonToCallUs() {
   return (
-    <div className={`${styles.container}`}>
+    <div className={`${styles.container} mt-5`}>
       <div className={`container`}>
-        <h2 className={`${styles.heading}`}>8 Reasons to Choose Call the Cleaners</h2>
+        <h2 className={`${styles.heading}`}>8 Reasons to Choose Shah Cleaning Services</h2>
         <p className={`${styles.text}`}>In order to make an informed decision, it is customary to conduct thorough research on cleaning services and carefully evaluate various <br /> companies based on their experience, pricing, guarantees, and reputation.</p>
         <TableContainer className={`${styles.table_container}`} component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
             <TableRow>
                 <StyledTableCell align="center">Benefits</StyledTableCell>
-                <StyledTableCell align="center">Call The Cleaners</StyledTableCell>
+                <StyledTableCell align="center">Shah Cleaning Services</StyledTableCell>
             </TableRow>
             </TableHead>
             <TableBody>

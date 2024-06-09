@@ -64,7 +64,7 @@ export default function PriceList() {
     <>
         <div className={`${styles.container} ${styles.remmarg} `}>
         <div className={`container`}>
-            <h2 className={`${styles.heading}`}>Call the Cleaners Price List</h2>
+            <h2 className={`${styles.heading}`}>Shah Cleaning Services Price List</h2>
             <TableContainer className={`${styles.table_container}`} component={Paper}>
             <Table sx={{ minWidth: 700 }} aria-label="customized table">
                 <TableHead>

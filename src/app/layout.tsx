@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+// import { Suspense } from 'react'
+// import Loading from "./loading"
 import Header from "../components/header/header"
 import Footer from "../components/footer/footer"
 import Script from "next/script";
@@ -24,10 +26,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header/>
+        {/* <Suspense fallback={<Loading/>}> */}
         <main className="main">
           {children}
-          <a className="call_container" href="tel:+923162007264"><IoCall className="call_icon"/></a>
+          <a className="call_container" href="tel:+11111111111"><IoCall className="call_icon"/></a>
         </main>
+        {/* </Suspense> */}
         <Footer/>
         <Script 
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 

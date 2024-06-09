@@ -90,7 +90,8 @@ export default function BasicTabs() {
   
 
   return (
-    <div className={`${styles.container} container mb-5`}>
+    <div className={`${styles.container} container`}>
+      <h2 className={styles.heading}>Our Reasonable Plan</h2>
         <Box sx={{ width: '100%' }}>
         <Box>
             <Tabs className={`${styles.tabs}`} value={value} onChange={handleChange} aria-label="basic tabs example">
@@ -101,7 +102,7 @@ export default function BasicTabs() {
         </Box>
         <CustomTabPanel value={value} index={0}>
             <div className={`${styles.pricing_details}`}>
-                <p className={`${styles.tab_heading}`}>Saves time and energy by contacting Call the Cleaners to maintain a <br /> healthy and hygienic living environment.</p>
+                <p className={`${styles.tab_heading}`}>Saves time and energy by contacting Shah Cleaning Services to maintain a <br /> healthy and hygienic living environment.</p>
                 <button className={`${styles.tab_btn}`}>Start From $150</button>
                 <div className={`${styles.plan_details} mt-3`}>
                   <div className="row">
@@ -156,7 +157,7 @@ export default function BasicTabs() {
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
             <div className={`${styles.pricing_details}`}>
-              <p className={`${styles.tab_heading}`}>Get thorough cleaning of hard-to-reach areas and neglected spaces to revive and restore <br /> the original beauty of your home with Call the Cleaners.</p>
+              <p className={`${styles.tab_heading}`}>Get thorough cleaning of hard-to-reach areas and neglected spaces to revive and restore <br /> the original beauty of your home with Shah Cleaning Services.</p>
               <button className={`${styles.tab_btn}`}>Start From $200</button>
               <div className={`${styles.plan_details} mt-3`}>
                   <div className="row">
@@ -211,7 +212,7 @@ export default function BasicTabs() {
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
             <div className={`${styles.pricing_details}`}>
-              <p className={`${styles.tab_heading}`}>Call the Cleaners helps retrieve the security deposit in full and presents <br />the property in the best possible condition for new tenants.</p>
+              <p className={`${styles.tab_heading}`}>Shah Cleaning Services helps retrieve the security deposit in full and presents <br />the property in the best possible condition for new tenants.</p>
               <button className={`${styles.tab_btn}`}>Start From $350</button>
               <div className={`${styles.plan_details} mt-3`}>
                   <div className="row">

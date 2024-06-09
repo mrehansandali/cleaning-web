@@ -28,7 +28,7 @@ export default function BasicModal({toggle, isOpenPopup}: Props) {
                     <p className={`${styles.heading}`}>Want 20% OFF</p>
                     <p className={`${styles.sub_heading}`}>On Your First Cleaning</p>
                     <p className={`${styles.text}`}>Schedule A Call</p>
-                    <button className={`${styles.button}`}><IoCall/></button>
+                    <a href='tel:+1111111111' className={`${styles.button}`}><IoCall/></a>
                     <p onClick={() => toggle()} className={`${styles.close_text}`}>No, I'll Pay Full Price.</p>
                 </div>
                 <div onClick={() => toggle()} className={`${styles.cross_container}`}><RxCross1 className={`${styles.cross_button}`}/></div>

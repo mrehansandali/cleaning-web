@@ -8,7 +8,7 @@ const Stepper = () => {
 
     const steps = [
         'Book your services online or over the phone',
-        'Call the Cleaners matches you with your trusted professional',
+        'Shah Cleaning Services matches you with your trusted professional',
         'Manage your bookings online through your own login portal',
         'Relax and enjoy your clean space',
       ];
@@ -25,7 +25,7 @@ const Stepper = () => {
             </div>
             <div className={`${styles.stepper_step} not_last`}>
             <div className={`${styles.stepper_circle}`}><FaHandshake className={`${styles.steps_icon}`}/></div>
-            <p className={`${styles.stepper_text}`}>Call the Cleaners matches <br /> you with your trusted professional</p>
+            <p className={`${styles.stepper_text}`}>Shah Cleaning Services matches <br /> you with your trusted professional</p>
             </div>
             {/* <div className={`${styles.stepper_step} not_last`}>
             <div className={`${styles.stepper_circle}`}><IoCall className={`${styles.steps_icon}`}/></div>

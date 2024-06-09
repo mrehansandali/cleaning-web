@@ -50,7 +50,7 @@ export default function WhatMakeUsDifferent() {
             <TableHead>
             <TableRow>
                 <StyledTableCell align="center">Benefits</StyledTableCell>
-                <StyledTableCell align="center">Call The Cleaners</StyledTableCell>
+                <StyledTableCell align="center">Shah Cleaning Services</StyledTableCell>
                 <StyledTableCell align="center">Standard Cleaning Companies</StyledTableCell>
             </TableRow>
             </TableHead>

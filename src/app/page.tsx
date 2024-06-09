@@ -28,7 +28,6 @@ const page = (props: Props) => {
       <BeforeAfter/>
       <GetACall/>
       <Services/>
-      <GetACall/>
       <WhatMakeUsDifferent/>
       <Stepper/>
       <PricingPlan/>

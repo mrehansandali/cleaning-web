@@ -7,7 +7,7 @@ const GetACall = (props: Props) => {
   return (
     <>
 
-        <div className="container text-center mb-5">
+        <div className="container text-center my-5">
             <button className={`${styles.callUs} mb-3`}>Get A Quote & Book Online</button>
             <p className={`${styles.text}`}>TAKES LESS THAN 60 SECONDS</p>
         </div>

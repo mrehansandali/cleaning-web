@@ -34,17 +34,15 @@ const header = (props: Props) => {
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                             {/* <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Home</a></li> */}
                             <li className="nav-item p-1 dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
                             <ul className={`${styles.dropdown} dropdown-menu`}>
-                                <li><a className="dropdown-item" href="#">House Cleaning</a></li>
-                                <li><a className="dropdown-item" href="#">Deep Cleaning</a></li>
-                                <li><a className="dropdown-item" href="#">End Of Lease Cleaning</a></li>
-                                <li><a className="dropdown-item" href="#">Regular Cleaning</a></li>
-                                <li><a className="dropdown-item" href="#">Carpet Cleaning</a></li>
+                                <li><Link className="dropdown-item" href="/services">All Services</Link></li>
+                                <li><a className="dropdown-item" href="#">Commercial Cleaning</a></li>
+                                <li><a className="dropdown-item" href="#">Domestic Cleaning</a></li>
+                                <li><a className="dropdown-item" href="#">Office Cleaning</a></li>
                                 <li><a className="dropdown-item" href="#">Construction Cleaning</a></li>
-                                <li><a className="dropdown-item" href="#">Other Cleaning</a></li>
                             </ul>
                             </li>
                             <li className="nav-item p-1"><Link className="nav-link active" aria-current="page" href="/prices">Prices</Link></li>
