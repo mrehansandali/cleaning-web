@@ -4,6 +4,7 @@ import { GiWorld, GiStarShuriken } from "react-icons/gi";
 import { IoMdMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
+import Link from 'next/link';
 
 type Props = {}
 
@@ -29,10 +30,12 @@ const footer = (props: Props) => {
                     <div className={`${styles.col_2} col-md-5 m-auto`}>
                         <h3 className={`${styles.heading}`}>Shah Cleaning Services</h3>
                         <ul>
-                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div> <a href="">Commercial Cleaning</a></li>
-                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div> <a href="">Domestic Cleaning</a></li>
-                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div> <a href="">Office Cleaning</a></li>
-                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div> <a href="">Construction Cleaning</a></li>
+                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div><Link className="dropdown-item" href="/services">All Services</Link></li>
+                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div><Link className="dropdown-item" href="/services/domestic-cleaning">Domestic Cleaning</Link></li>
+                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div><Link className="dropdown-item" href="/services/carpet-cleaning">Carpet Cleaning</Link></li>
+                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div><Link className="dropdown-item" href="/services/end-of-lease-cleaning">End Of Lease Cleaning</Link></li>
+                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div><Link className="dropdown-item" href="/services/commercial-cleaning">Commercial Cleaning</Link></li>
+                            <li><div><GiStarShuriken className={`${styles.info_icons}`}/></div><Link className="dropdown-item" href="/services/construction-cleaning">Construction Cleaning</Link></li>
                         </ul>
                     </div>
                 </div>

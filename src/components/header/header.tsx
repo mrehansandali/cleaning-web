@@ -39,14 +39,14 @@ const header = (props: Props) => {
                             </a>
                             <ul className={`${styles.dropdown} dropdown-menu`}>
                                 <li><Link className="dropdown-item" href="/services">All Services</Link></li>
-                                <li><a className="dropdown-item" href="#">Commercial Cleaning</a></li>
-                                <li><a className="dropdown-item" href="#">Domestic Cleaning</a></li>
-                                <li><a className="dropdown-item" href="#">Office Cleaning</a></li>
-                                <li><a className="dropdown-item" href="#">Construction Cleaning</a></li>
+                                <li><Link className="dropdown-item" href="/services/domestic-cleaning">Domestic Cleaning</Link></li>
+                                <li><Link className="dropdown-item" href="/services/carpet-cleaning">Carpet Cleaning</Link></li>
+                                <li><Link className="dropdown-item" href="/services/end-of-lease-cleaning">End Of Lease Cleaning</Link></li>
+                                <li><Link className="dropdown-item" href="/services/commercial-cleaning">Commercial Cleaning</Link></li>
+                                <li><Link className="dropdown-item" href="/services/construction-cleaning">Construction Cleaning</Link></li>
                             </ul>
                             </li>
                             <li className="nav-item p-1"><Link className="nav-link active" aria-current="page" href="/prices">Prices</Link></li>
-                            {/* <li className="nav-item p-1"><a className="nav-link active" aria-current="page" href="#">Reviews</a></li> */}
                             <li className="nav-item p-1"><Link className="nav-link active" aria-current="page" href="/about">About Us</Link></li>
                             <li className="nav-item p-1"><Link className="nav-link active" aria-current="page" href="/contact">Contact Us</Link></li>
                         </ul>
