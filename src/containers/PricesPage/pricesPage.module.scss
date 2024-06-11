@@ -43,13 +43,20 @@
     }
 
     .table_container{
-        background-color: #ffffffab;
         scrollbar-width: thin;
+        border: 1px solid rgb(197, 195, 195);
         th{
             font-size: 16px;
             font-family: $poppins_regular;
             background-color: $yellow;
             color: #000;
+            padding: 15px 5px;
+        }
+        td{
+            padding: 15px 5px;
+        }
+        tr{
+            text-align: center;
         }
     }
 }

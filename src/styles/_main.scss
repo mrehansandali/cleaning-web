@@ -193,4 +193,14 @@
 
 .dropdown-toggle:hover .dropdown-menu {
     display: block !important;
-  }
+}
+
+////// tabpanel /////
+
+#vertical-tabpanel-0,
+#vertical-tabpanel-1,
+#vertical-tabpanel-2,
+#vertical-tabpanel-3,
+#vertical-tabpanel-4{
+    flex: 2;
+}
