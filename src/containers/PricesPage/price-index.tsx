@@ -7,11 +7,10 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import styles from "./pricesPage.module.scss"
-import { FaAngleDown, FaBroom, FaBuilding, FaHome } from "react-icons/fa";
+import { FaAngleDown, FaBuilding, FaHome } from "react-icons/fa";
 import { PiSprayBottleFill } from 'react-icons/pi';
-import { GiGloves, GiSofa, GiVacuumCleaner } from 'react-icons/gi';
-import { IoIosBed, IoIosConstruct } from 'react-icons/io';
-import { FaRug } from 'react-icons/fa6';
+import { GiVacuumCleaner } from 'react-icons/gi';
+import { IoIosConstruct } from 'react-icons/io';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -86,6 +85,18 @@ const eolCleaningPrices = [
   { propertySize: '7 Bedrooms, 4 Bathrooms', price: '$864.50' }
 ];
 
+const eolServices = [
+  { service: "Walls Spot Cleaning (1 hr)", price: "$60" },
+  { service: "Small Balcony", price: "$30" },
+  { service: "Large Balcony", price: "$60" },
+  { service: "Blinds/ Shutters", price: "$10 (per blind/ shutter)" },
+  { service: "Carpet Steam Cleaning", price: "$35 (per room)" },
+  { service: "Garage Sweep & Tidy", price: "$60" },
+  { service: "Patio/Deck", price: "$30" },
+  { service: "Inside Fridge", price: "$30" },
+  { service: "End of Lease Flea Treatment (pest control)", price: "$140" }
+];
+
 const carpetCleaningPrices = [
   { rooms: "1 Room", price: '$110' },
   { rooms: "2 Rooms", price: '$140' },
@@ -93,6 +104,12 @@ const carpetCleaningPrices = [
   { rooms: "4 Rooms", price: '$200' },
   { rooms: "5 Rooms", price: '$220' },
   { rooms: "6 Rooms", price: '$250' }
+];
+
+const carpetCleaningService = [
+  {place: "Living Room", price: "$20.00"},
+  {place: "Staircase", price: "$20.00"},
+  {place: "Heavy Duty Stain Removal", price: "$10.00"},
 ];
 
 
@@ -187,7 +204,7 @@ export default function priceIndex() {
           </TabPanel>
 
           <TabPanel value={value} index={1}>
-            <h2 className={`${styles.heading}`}>Carpet Cleaning Service Prices</h2>
+            <h2 className={`${styles.heading}`}>Carpet Cleaning Prices</h2>
             <table className={`${styles.table_container} table table-striped`}>
               <thead>
                 <tr>
@@ -207,10 +224,30 @@ export default function priceIndex() {
                 
               </tbody>
             </table>
+            <h2 className={`${styles.heading}`}>Add-ons Service</h2>
+            <table className={`${styles.table_container} table table-striped`}>
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Prices</th>
+                </tr>
+              </thead>
+              <tbody>
+                {carpetCleaningService.map((row,index)=>{
+                  return (
+                    <tr key={index+1}>
+                      <td>{row.place}</td>
+                      <td>{row.price}</td>
+                    </tr>
+                  )
+                })}
+                
+              </tbody>
+            </table>
           </TabPanel>
 
           <TabPanel value={value} index={2}>
-            <h2 className={`${styles.heading}`}>End Of Lease Cleaning Service Prices</h2>
+            <h2 className={`${styles.heading}`}>End Of Lease Cleaning Prices</h2>
             <table className={`${styles.table_container} table table-striped`}>
             <thead>
               <tr>
@@ -230,11 +267,32 @@ export default function priceIndex() {
               
             </tbody>
           </table>
+          <h2 className={`${styles.heading}`}>Add-ons Service</h2>
+          <table className={`${styles.table_container} table table-striped`}>
+          <thead>
+            <tr>
+              <th>Property Size</th>
+              <th>Prices</th>
+            </tr>
+          </thead>
+          <tbody>
+            {eolServices.map((row,index)=>{
+              return (
+                <tr key={index+1}>
+                  <td>{row.service}</td>
+                  <td>{row.price}</td>
+                </tr>
+              )
+            })}
+            
+          </tbody>
+        </table>
           </TabPanel>
 
 
           <TabPanel value={value} index={3}>
-            <h2 className={`${styles.heading}`}>Commercial Cleaning Service Prices</h2>
+            <p>We will tell the details later.</p>
+            {/* <h2 className={`${styles.heading}`}>Commercial Cleaning Service Prices</h2>
             <table className={`${styles.table_container} table table-striped`}>
               <thead>
                 <tr>
@@ -253,7 +311,7 @@ export default function priceIndex() {
                 })}
                 
               </tbody>
-            </table>
+            </table> */}
           </TabPanel>
 
 
@@ -280,6 +338,7 @@ export default function priceIndex() {
               <h3 className={`${styles.accordion_heading}`}><FaHome className={`${styles.heading_icon} me-3`}/> Domestic Cleaning</h3>
             </AccordionSummary>
             <AccordionDetails>
+            <h2 className={`${styles.heading}`}>Prices</h2>
               <table className={`${styles.table_container} table table-striped`}>
                 <thead>
                   <tr>
@@ -292,6 +351,25 @@ export default function priceIndex() {
                     return (
                       <tr key={index+1}>
                         <td>{row.propertySize}</td>
+                        <td>{row.price}</td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+              <h2 className={`${styles.heading}`}>Add-ons Service</h2>
+              <table className={`${styles.table_container} table table-striped`}>
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Prices</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {domesticCleaningService.map((row,index)=>{
+                    return (
+                      <tr key={index+1}>
+                        <td>{row.service}</td>
                         <td>{row.price}</td>
                       </tr>
                     )
@@ -311,6 +389,7 @@ export default function priceIndex() {
               <h3 className={`${styles.accordion_heading}`}><GiVacuumCleaner className={`${styles.heading_icon} me-3`}/> Carpet Cleaning</h3>
             </AccordionSummary>
             <AccordionDetails>
+            <h2 className={`${styles.heading}`}>Prices</h2>
               <table className={`${styles.table_container} table table-striped`}>
                 <thead>
                   <tr>
@@ -330,6 +409,26 @@ export default function priceIndex() {
                   
                 </tbody>
               </table>
+              <h2 className={`${styles.heading}`}>Add-ons Service</h2>
+              <table className={`${styles.table_container} table table-striped`}>
+                <thead>
+                  <tr>
+                    <th>Property Size</th>
+                    <th>Prices</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {carpetCleaningService.map((row,index)=>{
+                    return (
+                      <tr key={index+1}>
+                        <td>{row.place}</td>
+                        <td>{row.price}</td>
+                      </tr>
+                    )
+                  })}
+                  
+                </tbody>
+              </table>
             </AccordionDetails>
           </Accordion>
 
@@ -342,6 +441,7 @@ export default function priceIndex() {
               <h3 className={`${styles.accordion_heading}`}><PiSprayBottleFill className={`${styles.heading_icon} me-3`}/> End Of Lease Cleaning</h3>
             </AccordionSummary>
             <AccordionDetails>
+              <h2 className={`${styles.heading}`}>Prices</h2>
               <table className={`${styles.table_container} table table-striped`}>
                 <thead>
                   <tr>
@@ -354,6 +454,25 @@ export default function priceIndex() {
                     return (
                       <tr key={index+1}>
                         <td>{row.propertySize}</td>
+                        <td>{row.price}</td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+              <h2 className={`${styles.heading}`}>Add-ons Service</h2>
+              <table className={`${styles.table_container} table table-striped`}>
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Prices</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {eolServices.map((row,index)=>{
+                    return (
+                      <tr key={index+1}>
+                        <td>{row.service}</td>
                         <td>{row.price}</td>
                       </tr>
                     )
@@ -369,10 +488,11 @@ export default function priceIndex() {
               aria-controls="panel1-content"
               id="panel1-header"
             >
-              <h3 className={`${styles.accordion_heading}`}><PiSprayBottleFill className={`${styles.heading_icon} me-3`}/>Commercial Cleaning</h3>
+              <h3 className={`${styles.accordion_heading}`}><FaBuilding className={`${styles.heading_icon} me-3`}/>Commercial Cleaning</h3>
             </AccordionSummary>
             <AccordionDetails>
-              <table className={`${styles.table_container} table table-striped`}>
+              <p className='m-0'>We will tell the details later.</p>
+              {/* <table className={`${styles.table_container} table table-striped`}>
                 <thead>
                   <tr>
                     <th>Property Size</th>
@@ -389,7 +509,7 @@ export default function priceIndex() {
                     )
                   })}
                 </tbody>
-              </table>
+              </table> */}
             </AccordionDetails>
           </Accordion>
 

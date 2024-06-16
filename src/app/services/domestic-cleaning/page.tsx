@@ -65,9 +65,9 @@ const domesticCleaningService = [
       </div>
 
       <div className={`${styles.container}`}>
-        <div className={`container`}>
+        <div className={`container pb-3`}>
           <h2 className={`${styles.heading}`}>Service Adds-On</h2>
-          <table className={`${styles.table_container} table table-striped`}>
+          <table className={`${styles.table_container} m-0 table table-striped`}>
             <thead>
               <tr>
                 <th>Service</th>

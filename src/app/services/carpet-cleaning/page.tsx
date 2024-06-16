@@ -22,6 +22,8 @@ const carpetCleaningService = [
 
   return (
     <>
+      <h1 className={`${styles.page_heading}`}>Carpet Cleaning Service</h1>
+
       <div className={`${styles.container}`}>
         <div className={`container`}>
           <h2 className={`${styles.heading}`}>Price List</h2>
@@ -48,9 +50,9 @@ const carpetCleaningService = [
       </div>
 
       <div className={`${styles.container}`}>
-        <div className={`container`}>
+        <div className={`container pb-3`}>
           <h2 className={`${styles.heading}`}>Service Adds-On</h2>
-          <table className={`${styles.table_container} table table-striped`}>
+          <table className={`${styles.table_container} m-0 table table-striped`}>
             <thead>
               <tr>
                 <th>Service</th>

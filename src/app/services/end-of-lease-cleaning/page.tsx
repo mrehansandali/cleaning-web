@@ -5,16 +5,16 @@ type Props = {}
 const page = (props: Props) => {
 
 const eolCleaningPrices = [
-    { size: "1 Bedroom, 1 Bathroom", price: '$352.00' },
-    { size: "2 Bedroom, 1 Bathrooms", price: '$429.00' },
-    { size: "3 Bedrooms, 2 Bathrooms", price: '$500.50' },
-    { size: "4 Bedrooms, 2 Bathrooms", price: '$577.50' },
-    { size: "5 Bedrooms, 2 Bathrooms", price: '$654.50' },
-    { size: "5 Bedrooms, 3 Bathrooms", price: '$687.50' },
-    { size: "6 Bedrooms, 3 Bathrooms", price: '$764.50' },
-    { size: "6 Bedrooms, 4 Bathrooms", price: '$797.50' },
-    { size: "7 Bedrooms, 4 Bathrooms", price: '$874.50' }
-  ];
+    { propertySize: '1 Bedroom, 1 Bathroom', price: '$342.00' },
+    { propertySize: '2 Bedroom, 1 Bathrooms', price: '$419.00' },
+    { propertySize: '3 Bedrooms, 2 Bathrooms', price: '$490.50' },
+    { propertySize: '4 Bedrooms, 2 Bathrooms', price: '$567.50' },
+    { propertySize: '5 Bedrooms, 2 Bathrooms', price: '$644.50' },
+    { propertySize: '5 Bedrooms, 3 Bathrooms', price: '$677.50' },
+    { propertySize: '6 Bedrooms, 3 Bathrooms', price: '$754.50' },
+    { propertySize: '6 Bedrooms, 4 Bathrooms', price: '$787.50' },
+    { propertySize: '7 Bedrooms, 4 Bathrooms', price: '$864.50' }
+];
   
   
 const eolServices = [
@@ -48,7 +48,7 @@ const eolServices = [
                 {eolCleaningPrices.map((row,index)=>{
                     return (
                     <tr key={index+1}>
-                        <td>{row.size}</td>
+                        <td>{row.propertySize}</td>
                         <td>{row.price}</td>
                     </tr>
                     )
