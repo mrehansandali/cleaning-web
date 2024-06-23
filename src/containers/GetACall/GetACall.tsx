@@ -8,8 +8,8 @@ const GetACall = (props: Props) => {
     <>
 
         <div className="container text-center my-5">
-            <button className={`${styles.callUs} mb-3`}>Get A Quote & Book Online</button>
-            <p className={`${styles.text}`}>TAKES LESS THAN 60 SECONDS</p>
+            <a href='tel:0452 412683' className={`${styles.callUs}`}>Get A Quote & Book Online</a>
+            <p className={`${styles.text} mt-4`}>TAKES LESS THAN 60 SECONDS</p>
         </div>
       
     </>

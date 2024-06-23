@@ -12,8 +12,11 @@ import 'swiper/css/pagination';
 import { IoCall } from "react-icons/io5";
 
 export const metadata: Metadata = {
-  title: "Shah Cleaning Service",
-  description: "All Cleaning Services",
+  title: "Shah Cleaning Service — We provide cleaning services all around NSW.",
+  description: "All Cleaning Services in Sydney",
+  icons: {
+    icon: ["./images/favicon.jpg"],
+  }
 };
 
 export default function RootLayout({
@@ -29,7 +32,7 @@ export default function RootLayout({
         <Suspense fallback={<Loading/>}>
         <main className="main">
           {children}
-          <a className="call_container" href="tel:+11111111111"><IoCall className="call_icon"/></a>
+          <a className="call_container" href="tel:0452412683"><IoCall className="call_icon"/></a>
         </main>
         </Suspense>
         <Footer/>

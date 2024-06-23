@@ -13,7 +13,6 @@ import Stepper from '@/containers/Stepper/Stepper';
 import Services from '@/containers/Services/Services';
 import WhatMakeUsDifferent from '@/containers/WhatMakeUsDifferent/whatMakeUsDifferent';
 import PricingPlan from '@/containers/PricingPlan/PricingPlan';
-// import ExServices from '@/containers/ExcludedServices/ExServices';
 import PriceList from '@/containers/PriceList/PriceList';
 import ReasonToCallUs from '@/containers/ReasonToCallUs/ReasonToCallUs';
 import OurGuarantee from '@/containers/OurGuarantee/OurGuarantee';
@@ -31,7 +30,6 @@ const page = (props: Props) => {
       <WhatMakeUsDifferent/>
       <Stepper/>
       <PricingPlan/>
-      {/* <ExServices/> */}
       <GetACall/>
       <PriceList/>
       <OurGuarantee/>

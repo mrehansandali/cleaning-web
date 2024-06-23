@@ -41,22 +41,22 @@ const pricing = [
 ];
 
 const services = [
-  {service: "Wet Wipe Blinds (per blind)", houseCleaning: "$5.00", deepCleaning: "$5.00", EOLcleaning: "$5.00"},
-  {service: "Inside Oven", houseCleaning: "$50.00", deepCleaning: "$50.00", EOLcleaning: "Included"},
-  {service: "Carpet Steam Clean (per room or area)", houseCleaning: "$25.00", deepCleaning: "$25.00", EOLcleaning: "$25.00"},
-  {service: "Sliding Door & Interior Windows (1-3 Bedroom)", houseCleaning: "$50.00", deepCleaning: "$50.00", EOLcleaning: "Included"},
-  {service: "Sliding Door & Interior Windows (4-6 Bedroom)", houseCleaning: "$110.00", deepCleaning: "$110.00", EOLcleaning: "Included"},
-  {service: "Inside Cupboards (must be empty) (1-3 Bedroom)", houseCleaning: "$50.00", deepCleaning: "$50.00", EOLcleaning: "Included"},
-  {service: "Inside Cupboards (must be empty) (4-6 Bedroom)", houseCleaning: "$110.00", deepCleaning: "$110.00", EOLcleaning: "Included"},
-  {service: "Garage Sweep & Tidy", houseCleaning: "$20.00", deepCleaning: "$20.00", EOLcleaning: "$20.00"},
-  {service: "Patio", houseCleaning: "$20.00", deepCleaning: "$20.00", EOLcleaning: "$20.00"},
-  {service: "Deck", houseCleaning: "$20.00", deepCleaning: "$20.00", EOLcleaning: "$20.00"},
-  {service: "Large Balcony", houseCleaning: "$50.00", deepCleaning: "$50.00", EOLcleaning: "$50.00"},
-  {service: "Small Balcony", houseCleaning: "$20.00", deepCleaning: "$20.00", EOLcleaning: "$20.00"},
-  {service: "Inside Fridge", houseCleaning: "$50.00", deepCleaning: "$50.00", EOLcleaning: "$50.00"},
-  {service: "Spot Clean Walls (30 Minutes)", houseCleaning: "$20.00", deepCleaning: "$20.00", EOLcleaning: "$20.00"},
-  {service: "Spot Clean Walls (1 Hour)", houseCleaning: "$50.00", deepCleaning: "$50.00", EOLcleaning: "$50.00"},
-  {service: "Change Bed Sheets", houseCleaning: "$5.00", deepCleaning: "$5.00", EOLcleaning: "$5.00"}
+  {service: "Wet Wipe Blinds (per blind)", houseCleaning: "$10.00", deepCleaning: "$10.00", EOLcleaning: "$10.00"},
+  {service: "Inside Oven", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "Included"},
+  {service: "Carpet Steam Clean (per room or area)", houseCleaning: "$35.00", deepCleaning: "$35.00", EOLcleaning: "$35.00"},
+  {service: "Sliding Door & Interior Windows (1-3 Bedroom)", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "Included"},
+  {service: "Sliding Door & Interior Windows (4-6 Bedroom)", houseCleaning: "$120.00", deepCleaning: "$120.00", EOLcleaning: "Included"},
+  {service: "Inside Cupboards (must be empty) (1-3 Bedroom)", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "Included"},
+  {service: "Inside Cupboards (must be empty) (4-6 Bedroom)", houseCleaning: "$120.00", deepCleaning: "$120.00", EOLcleaning: "Included"},
+  {service: "Garage Sweep & Tidy", houseCleaning: "$30.00", deepCleaning: "$30.00", EOLcleaning: "$30.00"},
+  {service: "Patio", houseCleaning: "$30.00", deepCleaning: "$30.00", EOLcleaning: "$30.00"},
+  {service: "Deck", houseCleaning: "$30.00", deepCleaning: "$30.00", EOLcleaning: "$30.00"},
+  {service: "Large Balcony", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "$60.00"},
+  {service: "Small Balcony", houseCleaning: "$30.00", deepCleaning: "$30.00", EOLcleaning: "$30.00"},
+  {service: "Inside Fridge", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "$60.00"},
+  {service: "Spot Clean Walls (30 Minutes)", houseCleaning: "$30.00", deepCleaning: "$30.00", EOLcleaning: "$30.00"},
+  {service: "Spot Clean Walls (1 Hour)", houseCleaning: "$60.00", deepCleaning: "$60.00", EOLcleaning: "$60.00"},
+  {service: "Change Bed Sheets", houseCleaning: "$10.00", deepCleaning: "$10.00", EOLcleaning: "$10.00"}
 ];
 
 export default function PriceList() {
