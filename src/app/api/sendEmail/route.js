@@ -8,10 +8,11 @@ export async function POST(request) {
         const transporter = nodemailer.createTransport({
             host: process.env.NEXT_PUBLIC_EMAIL_HOST,
             port: parseInt(process.env.NEXT_PUBLIC_EMAIL_PORT),
-            secure: false,
-            auth: {
-                user: process.env.NEXT_PUBLIC_EMAIL_USER,
-                pass: process.env.NEXT_PUBLIC_EMAIL_PASSWORD
+            secure: true,
+            dkim: {
+                domainName: process.env.HOSTNAME,
+                keySelector: "default",
+                privateKey: process.env.DKIMVALUE
             }
         });
 

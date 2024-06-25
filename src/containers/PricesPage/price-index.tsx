@@ -491,7 +491,7 @@ export default function priceIndex() {
               <h3 className={`${styles.accordion_heading}`}><FaBuilding className={`${styles.heading_icon} me-3`}/>Commercial Cleaning</h3>
             </AccordionSummary>
             <AccordionDetails>
-              <p className='m-0'>We will tell the details later.</p>
+              <p className='m-0'>Schedule A Call To Know The Details.</p>
               {/* <table className={`${styles.table_container} table table-striped`}>
                 <thead>
                   <tr>

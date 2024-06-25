@@ -4,71 +4,14 @@ type Props = {}
 
 const page = (props: Props) => {
 
-const carpetCleaningPrices = [
-  { rooms: "1 Room", price: '$110' },
-  { rooms: "2 Rooms", price: '$140' },
-  { rooms: "3 Rooms", price: '$170' },
-  { rooms: "4 Rooms", price: '$200' },
-  { rooms: "5 Rooms", price: '$220' },
-  { rooms: "6 Rooms", price: '$250' }
-];
-  
-const carpetCleaningService = [
-  {place: "Living Room", price: "$20.00"},
-  {place: "Staircase", price: "$20.00"},
-  {place: "Heavy Duty Stain Removal", price: "$10.00"},
-];
-
-
   return (
     <>
+      <h1 className={`${styles.page_heading}`}>Construction Cleaning Service</h1>
       <div className={`${styles.container}`}>
         <div className={`container`}>
-          <h2 className={`${styles.heading}`}>Price List</h2>
-          <table className={`${styles.table_container} table table-striped`}>
-            <thead>
-              <tr>
-                <th>Service</th>
-                <th>Prices</th>
-              </tr>
-            </thead>
-            <tbody>
-              {carpetCleaningPrices.map((row,index)=>{
-                return (
-                  <tr key={index+1}>
-                    <td>{row.rooms}</td>
-                    <td>{row.price}</td>
-                  </tr>
-                )
-              })}
-              
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div className={`${styles.container}`}>
-        <div className={`container`}>
-          <h2 className={`${styles.heading}`}>Service Adds-On</h2>
-          <table className={`${styles.table_container} table table-striped`}>
-            <thead>
-              <tr>
-                <th>Service</th>
-                <th>Prices</th>
-              </tr>
-            </thead>
-            <tbody>
-              {carpetCleaningService.map((row,index)=>{
-                return (
-                  <tr key={index+1}>
-                    <td>{row.place}</td>
-                    <td>{row.price}</td>
-                  </tr>
-                )
-              })}
-              
-            </tbody>
-          </table>
+            <p>At our organization, we recognize the individuality of each property and the need for a customized approach to cleaning to achieve optimal outcomes. This is why we present personalized pricing tailored to meet your specific cleaning requirements.</p>
+            <p>To initiate the process, simply reach out to us at 0451550849 to arrange an appointment with our on-site manager. Our manager will then visit your property at a time convenient for you, evaluating the cleaning needs, considering factors such as property size, service type, and any particular requests you may have.</p>
+            <p>Upon assessment of your property, we will furnish you with a comprehensive quote detailing the services to be rendered along with their corresponding costs. Our pricing policy is transparent, ensuring no hidden charges or unexpected expenses.</p>
         </div>
       </div>
     </>
