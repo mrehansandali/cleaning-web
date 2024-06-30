@@ -38,6 +38,4 @@ const page = (props: Props) => {
   )
 }
 
-const port = process.env.port || 8080;
-
 export default page
