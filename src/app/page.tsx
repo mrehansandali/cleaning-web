@@ -23,8 +23,8 @@ const page = (props: Props) => {
   return (
     <>
       <FormComp/>
-      <Testimonail/>
-      <BeforeAfter/>
+      {/* <Testimonail/>
+      <BeforeAfter/> */}
       <GetACall/>
       <Services/>
       <WhatMakeUsDifferent/>

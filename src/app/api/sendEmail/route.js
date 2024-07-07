@@ -3,17 +3,21 @@ import nodemailer from 'nodemailer'
 
 export async function POST(request) {
     try {
-        const { email, phone, username, service, bedrooms, bathrooms, postCode} = await request.json();
+        const { email, phone, username, service, bedrooms, bathrooms, postCode} = await request.body.json();
 
         const transporter = nodemailer.createTransport({
             host: process.env.NEXT_PUBLIC_EMAIL_HOST,
             port: parseInt(process.env.NEXT_PUBLIC_EMAIL_PORT),
             secure: true,
-            dkim: {
-                domainName: process.env.HOSTNAME,
-                keySelector: "default",
-                privateKey: process.env.DKIMVALUE
-            }
+            // dkim: {
+            //     domainName: process.env.HOSTNAME,
+            //     keySelector: "default",
+            //     privateKey: process.env.DKIMVALUE
+            // }
+            auth:{
+                user: process.env.NEXT_PUBLIC_EMAIL_USER,
+                pass: process.env.NEXT_PUBLIC_EMAIL_PASSWORD,
+            },
         });
 
         const mailOption = {
@@ -37,6 +41,6 @@ export async function POST(request) {
 
         return NextResponse.json({ message: "Email Sent Successfully" }, { status: 200 })
     } catch (error) {
-        return NextResponse.json({ message: "Failed to Send Email", error: error.message }, { status: 500 });
+        return NextResponse.json({ message: "Failed to Send Email", error: console.log(error.message) }, { status: 500 });
     }
 }
